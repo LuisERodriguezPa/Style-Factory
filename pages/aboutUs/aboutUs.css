@@ -100,3 +100,132 @@ h1, h2, h3, h4, h5, h6 {
   max-height: 100px;
   margin-top: 5px;
 }
+
+.diferencias {
+    padding: 80px 20px;
+    text-align: center;
+    background: #0a0a0a;
+}
+
+.diferencias h2 {
+    color: #AE8D3E;
+    margin-bottom: 40px;
+}
+
+.diferencias-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: #1A1A1A;
+    padding: 30px;
+    width: 250px;
+    border-radius: 10px;
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border: 1px solid #AE8D3E;
+}
+
+.card h3 {
+    color: #AE8D3E;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #B5ADAD;
+    font-size: 14px;
+}
+
+.cta-container {
+    margin-top: 30px;
+}
+
+.btn-principal {
+    background: #522676;
+    color: white;
+    border: 2px solid transparent;
+    padding: 12px 30px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-principal:hover {
+    background: white;
+    color: #AE8D3E;
+    border: 2px solid #AE8D3E;
+    transform: scale(1.05);
+}
+
+.footer {
+    background: #111;
+    color: #B5ADAD;
+    margin-top: 50px;
+    font-size: 14px;
+    border-top: 1px solid #222;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.footer-links a {
+    color: #B5ADAD;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #AE8D3E;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-links a {
+    color: #B5ADAD;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #AE8D3E;
+    transform: scale(1.2);
+}
+
+.footer-copyright {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #333;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
