@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
     font-family: "Montserrat", sans-serif;
 }
@@ -17,3 +18,107 @@ body{
     color: #522676;
     
 }
+=======
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f9f9f9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-style: normal
+}
+
+.img-container {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+    border: 3px solid #AE8D3E;
+  transition: transform 0.3s;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+} 
+
+.img-container:hover {
+  transform: scale(1.1);
+}  
+
+.titulo-seccion {
+  font-family: 'Playfair Display', serif;
+  color: #522676;
+  font-size: 2.5rem;
+}
+
+    
+.team-card {
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #AE8D3E;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+
+
+.card-title {
+  font-family: 'Playfair Display', serif;
+  color: #522676;
+}
+
+
+.card-text {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.btn-linkedin {
+  background-color: #522676;
+  color: white;
+  border-radius: 20px;
+  padding: 5px 15px;
+}
+
+.btn-linkedin:hover {
+  background-color: #3b1a56;
+  color: white;
+}
+
+.btn-github {
+  border: 1px solid #AE8D3E;
+  color: #AE8D3E;
+  border-radius: 20px;
+  padding: 5px 15px;
+}
+
+.btn-github:hover {
+  background-color: #AE8D3E;
+  color: white;
+}
+
+.descripcion {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+/* Cuando pasas por el rol */
+.rol:hover + .descripcion {
+  opacity: 1;
+  max-height: 100px;
+  margin-top: 5px;
+}
+>>>>>>> dev
