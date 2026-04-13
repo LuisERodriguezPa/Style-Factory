@@ -36,7 +36,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2.5rem;
 }
 
-    
 .team-card {
   border: none;
   border-radius: 15px;
@@ -49,13 +48,10 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-
-
 .card-title {
   font-family: 'Playfair Display', serif;
   color: #522676;
 }
-
 
 .card-text {
   color: #555;
@@ -94,13 +90,12 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
 }
 
-/* Cuando pasas por el rol */
 .rol:hover + .descripcion {
   opacity: 1;
   max-height: 100px;
   margin-top: 5px;
 }
-/* Estilos mision y vision*/
+
 .mision, .vision{
     max-width: 1240px;
     margin: 0 auto;
@@ -109,19 +104,19 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px;
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
+
 .titulo_mision, .titulo_vision{
     font-family:"Playfair", serif;
     text-align: center;
     margin-top:0;
     margin-bottom: 12px;
     color: #522676;
-    
 }
 
 .diferencias {
     padding: 80px 20px;
     text-align: center;
-    background: #0a0a0a;
+    background: #f1f1ea;
 }
 
 .diferencias h2 {
@@ -138,12 +133,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card {
-    background: #1A1A1A;
+    background: #ebebeb;
     padding: 30px;
     width: 250px;
     border-radius: 10px;
     transition: 0.3s;
-    border: 1px solid transparent;
+    border: 1px solid #ddd;
 }
 
 .card:hover {
@@ -157,7 +152,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card p {
-    color: #B5ADAD;
+    color: #555;
     font-size: 14px;
 }
 
