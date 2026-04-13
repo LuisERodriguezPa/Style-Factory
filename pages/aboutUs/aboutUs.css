@@ -1,0 +1,11 @@
+body{
+    font-family: "Montserrat", sans-serif;
+}
+.mision, .vision{
+    max-width: 1240px;
+    margin: 0 auto;
+}
+.titulo_mision, .titulo_vision{
+    font-family:"Playfair", serif;
+    text-align: center;
+}
