@@ -4,16 +4,16 @@ body{
 .mision, .vision{
     max-width: 1240px;
     margin: 0 auto;
-    margin-bottom:32px;
-    background-color: #522676;
-    color: white;
+    margin-bottom:32px;  
     border-radius: 10px;
     padding: 20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 .titulo_mision, .titulo_vision{
     font-family:"Playfair", serif;
     text-align: center;
     margin-top:0;
     margin-bottom: 12px;
+    color: #522676;
     
 }
