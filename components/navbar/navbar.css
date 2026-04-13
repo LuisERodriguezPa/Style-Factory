@@ -1,0 +1,96 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar contenedor */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #d906ec; /* azul oscuro elegante */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.navbar__logo {
+    width: 140px;
+    height: auto;
+}
+
+/* Links */
+.navbar__links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+/* Estilo de links */
+.navbar__links a {
+    text-decoration: none;
+    color: #e2e8f0;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Hover elegante */
+.navbar__links a:hover {
+    color: #38bdf8;
+}
+
+/* Botón especial (Programar servicio) */
+.navbar__links li:nth-child(5) a {
+    background: #38bdf8;
+    color: #0f172a;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.navbar__links li:nth-child(5) a:hover {
+    background: #0ea5e9;
+    color: white;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    /* Menú en columna */
+    .navbar__links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #0f172a;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+
+        /* oculto por defecto */
+        display: none;
+    }
+
+    /* Mostrar menú */
+    .navbar__links.active {
+        display: flex;
+    }
+
+    /* Icono hamburguesa */
+    .menu-toggle {
+        display: block;
+        font-size: 1.8rem;
+        color: white;
+        cursor: pointer;
+    }
+}
