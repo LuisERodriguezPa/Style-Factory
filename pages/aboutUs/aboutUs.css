@@ -96,24 +96,47 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 5px;
 }
 
-.mision, .vision{
-    max-width: 1240px;
-    margin: 0 auto;
-    margin-bottom:32px;  
+/* Estilo uniforme para las tarjetas de misión y visión */
+.mision, .vision {
+    width: 100%;
+    margin-bottom: 32px;
     border-radius: 10px;
     padding: 20px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    border: 2px solid #AE8D3E;
+    background: #ffffff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.titulo_mision, .titulo_vision{
-    font-family:"Playfair", serif;
+/* Elimina el margen inferior de la última tarjeta */
+.mision:last-child {
+    margin-bottom: 0;
+}
+
+/* Efecto de elevación al pasar el cursor */
+.mision:hover, .vision:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Títulos elegantes para misión y visión */
+.titulo_mision, .titulo_vision {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
     text-align: center;
-    margin-top:0;
+    margin-top: 0;
     margin-bottom: 12px;
     color: #522676;
 }
 
-/* ======= SECCIÓN ¿POR QUÉ ELEGIRNOS? - SOLO ESTO CAMBIÓ ======= */
+/* Texto descriptivo con fuente legible */
+.mision p, .vision p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #2c2c2c;
+}
+
 .diferencias {
     padding: 60px 20px 80px 20px;
     text-align: center;
@@ -160,7 +183,6 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.5;
     font-weight: 500;
 }
-/* ======= FIN DE LOS CAMBIOS ======= */
 
 .cta-container {
     margin-top: 30px;
