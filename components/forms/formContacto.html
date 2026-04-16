@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="formContacto.css">
+
+    <title>Formulario de contacto</title>
+</head>
+
+<body>
+
+    <section class="form-container">
+
+        <h2 class="titulo-form">Contáctanos</h2>
+
+        <form id="formContacto" class="formulario">
+
+            <div class="input-group">
+                <input type="text" id="nombre" required placeholder="">
+                <label>Nombre</label>
+                <span class="error"></span>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="correo" required placeholder="">
+                <label>Correo electrónico</label>
+                <span class="error"></span>
+            </div>
+
+            <div class="input-group">
+                <input type="tel" id="telefono" placeholder="">
+                <label>Teléfono</label>
+                <span class="error"></span>
+            </div>
+
+            <div class="input-group">
+                <textarea id="mensaje" rows="3" required placeholder=""></textarea>
+                <label>Mensaje</label>
+                <span class="error"></span>
+            </div>
+            <button type="submit" class="btn-enviar">Enviar</button>
+
+        </form>
+
+    </section>
+
+    <script src="formContacto.js"></script>
+
+</body>
+</html>
