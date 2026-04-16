@@ -40,6 +40,11 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   background: white;
    border-radius: 15px;
+}
+
+.team-card {
+  border: none;
+  border-radius: 15px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 2px solid #AE8D3E;
   
@@ -51,13 +56,10 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-
-
 .card-title {
   font-family: 'Playfair Display', serif;
   color: #522676;
 }
-
 
 .card-text {
   color: #555;
@@ -97,38 +99,62 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
 }
 
-/* Cuando pasas por el rol */
 .rol:hover + .descripcion {
   opacity: 1;
   max-height: 100px;
   margin-top: 5px;
 }
-/* Estilos mision y vision*/
-.mision, .vision{
-    max-width: 1240px;
-    margin: 0 auto;
-    margin-bottom:32px;  
+
+/* Estilo uniforme para las tarjetas de misión y visión */
+.mision, .vision {
+    width: 100%;
+    margin-bottom: 32px;
     border-radius: 10px;
     padding: 20px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    border: 2px solid #AE8D3E;
+    background: #ffffff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.titulo_mision, .titulo_vision{
-    font-family:"Playfair", serif;
+
+/* Elimina el margen inferior de la última tarjeta */
+.mision:last-child {
+    margin-bottom: 0;
+}
+
+/* Efecto de elevación al pasar el cursor */
+.mision:hover, .vision:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Títulos elegantes para misión y visión */
+.titulo_mision, .titulo_vision {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
     text-align: center;
-    margin-top:0;
+    margin-top: 0;
     margin-bottom: 12px;
     color: #522676;
-    
+}
+
+/* Texto descriptivo con fuente legible */
+.mision p, .vision p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #2c2c2c;
 }
 
 .diferencias {
-    padding: 80px 20px;
+    padding: 60px 20px 80px 20px;
     text-align: center;
-    background: #0a0a0a;
+    background: #f1f1ea;
+    margin-top: 3em;
 }
 
 .diferencias h2 {
-    color: #AE8D3E;
+    color: #522676;
     margin-bottom: 40px;
 }
 
@@ -140,28 +166,32 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 40px;
 }
 
-.card {
-    background: #1A1A1A;
-    padding: 30px;
-    width: 250px;
-    border-radius: 10px;
+.diferencias-grid .diferencia-card {
+    background: #ffffff;
+    padding: 30px 20px;
+    width: 280px;
+    min-width: 200px;
+    border-radius: 15px;
     transition: 0.3s;
-    border: 1px solid transparent;
+    border: 2px solid #AE8D3E;
 }
 
-.card:hover {
+.diferencias-grid .diferencia-card:hover {
     transform: translateY(-8px);
-    border: 1px solid #AE8D3E;
+    border: 2px solid #AE8D3E;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-.card h3 {
-    color: #AE8D3E;
+.diferencias-grid .diferencia-card h3 {
+    color: #522676;
     margin-bottom: 15px;
 }
 
-.card p {
-    color: #B5ADAD;
+.diferencias-grid .diferencia-card p {
+    color: #2c2c2c;
     font-size: 14px;
+    line-height: 1.5;
+    font-weight: 500;
 }
 
 .cta-container {
@@ -244,9 +274,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
-    .card {
+    .diferencias-grid .diferencia-card {
         width: 100%;
         max-width: 300px;
+        margin: 0 auto;
     }
 }
 
