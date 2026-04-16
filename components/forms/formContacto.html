@@ -3,11 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Fuentes -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="formContacto.css">
 
     <title>Formulario de contacto</title>
@@ -19,34 +15,51 @@
 
         <h2 class="titulo-form">Contáctanos</h2>
 
-        <form id="formContacto" class="formulario">
+        <form 
+            id="formContacto" 
+            class="formulario"
+            action="https://formspree.io/f/mvzdkdjl"
+            method="POST"
+        >
 
             <div class="input-group">
-                <input type="text" id="nombre" required placeholder="">
+                <input type="text" id="nombre" name="nombre" required placeholder="">
                 <label>Nombre</label>
-                <span class="error"></span>
+                <span class="error" id="errorNombre"></span>
             </div>
 
             <div class="input-group">
-                <input type="email" id="correo" required placeholder="">
+                <input type="email" id="correo" name="correo" required placeholder="">
                 <label>Correo electrónico</label>
-                <span class="error"></span>
+                <span class="error" id="errorCorreo"></span>
             </div>
 
             <div class="input-group">
-                <input type="tel" id="telefono" placeholder="">
+                <input type="tel" id="telefono" name="telefono" placeholder="">
                 <label>Teléfono</label>
-                <span class="error"></span>
+                <span class="error" id="errorTelefono"></span>
             </div>
 
             <div class="input-group">
-                <textarea id="mensaje" rows="3" required placeholder=""></textarea>
+                <textarea id="mensaje" name="mensaje" rows="3" required placeholder=""></textarea>
                 <label>Mensaje</label>
-                <span class="error"></span>
+                <span class="error" id="errorMensaje"></span>
             </div>
+
+            <div id="mensajeEnvio" class="mensaje-exito" style="display: none;">
+                ¡Gracias! Tu mensaje ha sido enviado correctamente. Te responderemos pronto.
+            </div>
+            
             <button type="submit" class="btn-enviar">Enviar</button>
 
         </form>
+        <div id="mensajeEnviando" class="mensaje-enviando" style="display: none;">
+            ⏳ Enviando mensaje... Espera un momento
+        </div>
+
+        <div id="mensajeEnvio" class="mensaje-exito" style="display: none;">
+            ✅ ¡Gracias! Tu mensaje ha sido enviado correctamente. Te responderemos pronto.
+        </div>
 
     </section>
 
