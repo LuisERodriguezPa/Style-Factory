@@ -1,21 +1,27 @@
-body{
-  font-family: 'Montserrat', sans-serif;
-  background-color: #f9f9f9;
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-style: normal
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal
 }
 
 .img-container {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+  width: 95%;
+  height: 200px; 
+  border-radius: 5%;
   overflow: hidden;
-    border: 3px solid #AE8D3E;
   transition: transform 0.3s;
+  margin: 5px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.34);
 }
 
 .img-container img {
@@ -23,17 +29,22 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   object-fit: cover;
   display: block;
-  margin: 0 auto;
 } 
 
 .img-container:hover {
-  transform: scale(1.1);
-}  
+    transform: scale(1.1);
+}
 
 .titulo-seccion {
-  font-family: 'Playfair Display', serif;
-  color: #522676;
-  font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    color: #522676;
+    font-size: 2.5rem;
+}
+
+.card.team-card {
+  padding: 0;
+  background: white;
+   border-radius: 15px;
 }
 
 .team-card {
@@ -41,53 +52,56 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 15px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 2px solid #AE8D3E;
+  
 }
+    
 
 .team-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .card-title {
-  font-family: 'Playfair Display', serif;
-  color: #522676;
+    font-family: 'Playfair Display', serif;
+    color: #522676;
 }
 
 .card-text {
   color: #555;
   font-size: 0.9rem;
+  cursor: pointer;
 }
 
 .btn-linkedin {
-  background-color: #522676;
-  color: white;
-  border-radius: 20px;
-  padding: 5px 15px;
+    background-color: #522676;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 15px;
 }
 
 .btn-linkedin:hover {
-  background-color: #3b1a56;
-  color: white;
+    background-color: #3b1a56;
+    color: white;
 }
 
 .btn-github {
-  border: 1px solid #AE8D3E;
-  color: #AE8D3E;
-  border-radius: 20px;
-  padding: 5px 15px;
+    border: 1px solid #AE8D3E;
+    color: #AE8D3E;
+    border-radius: 20px;
+    padding: 5px 15px;
 }
 
 .btn-github:hover {
-  background-color: #AE8D3E;
-  color: white;
+    background-color: #AE8D3E;
+    color: white;
 }
 
 .descripcion {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  display: block;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: block;
 }
 
 .rol:hover + .descripcion {
@@ -125,6 +139,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2rem;
     text-align: center;
     margin-top: 0;
+    margin-top: 0;
     margin-bottom: 12px;
     color: #522676;
 }
@@ -141,6 +156,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 60px 20px 80px 20px;
     text-align: center;
     background: #f1f1ea;
+    margin-top: 3em;
 }
 
 .diferencias h2 {
@@ -208,61 +224,6 @@ h1, h2, h3, h4, h5, h6 {
     transform: scale(1.05);
 }
 
-.footer {
-    background: #111;
-    color: #B5ADAD;
-    margin-top: 50px;
-    font-size: 14px;
-    border-top: 1px solid #222;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 40px 20px;
-}
-
-.footer-links a {
-    color: #B5ADAD;
-    text-decoration: none;
-    display: block;
-    margin: 10px 0;
-    transition: 0.3s;
-}
-
-.footer-links a:hover {
-    color: #AE8D3E;
-}
-
-.footer-contact p {
-    margin: 5px 0;
-}
-
-.social-links {
-    display: flex;
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.social-links a {
-    color: #B5ADAD;
-    font-size: 20px;
-    transition: 0.3s;
-}
-
-.social-links a:hover {
-    color: #AE8D3E;
-    transform: scale(1.2);
-}
-
-.footer-copyright {
-    text-align: center;
-    padding: 20px;
-    border-top: 1px solid #333;
-}
-
 @media (max-width: 768px) {
     .diferencias-grid .diferencia-card {
         width: 100%;
@@ -271,7 +232,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
- /* Contenedor principal */
+/* Contenedor principal */
 .galeria {
     margin: 50px auto;
     display: flex;
@@ -321,7 +282,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     padding: 20px;
     color: white;
-    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.4s ease, transform 0.4s ease;
@@ -349,6 +310,7 @@ h1, h2, h3, h4, h5, h6 {
     .galeria {
         height: 300px;
     }
+
     .item {
         flex: 0 0 200px;
         height: 300px;
