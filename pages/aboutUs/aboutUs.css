@@ -113,14 +113,15 @@ h1, h2, h3, h4, h5, h6 {
     color: #522676;
 }
 
+/* ======= SECCIÓN ¿POR QUÉ ELEGIRNOS? - SOLO ESTO CAMBIÓ ======= */
 .diferencias {
-    padding: 80px 20px;
+    padding: 60px 20px 80px 20px;
     text-align: center;
     background: #f1f1ea;
 }
 
 .diferencias h2 {
-    color: #AE8D3E;
+    color: #522676;
     margin-bottom: 40px;
 }
 
@@ -132,29 +133,34 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 40px;
 }
 
-.card {
-    background: #ebebeb;
-    padding: 30px;
-    width: 250px;
-    border-radius: 10px;
+.diferencias-grid .diferencia-card {
+    background: #ffffff;
+    padding: 30px 20px;
+    width: 280px;
+    min-width: 200px;
+    border-radius: 15px;
     transition: 0.3s;
-    border: 1px solid #ddd;
+    border: 2px solid #AE8D3E;
 }
 
-.card:hover {
+.diferencias-grid .diferencia-card:hover {
     transform: translateY(-8px);
-    border: 1px solid #AE8D3E;
+    border: 2px solid #AE8D3E;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-.card h3 {
-    color: #AE8D3E;
+.diferencias-grid .diferencia-card h3 {
+    color: #522676;
     margin-bottom: 15px;
 }
 
-.card p {
-    color: #555;
+.diferencias-grid .diferencia-card p {
+    color: #2c2c2c;
     font-size: 14px;
+    line-height: 1.5;
+    font-weight: 500;
 }
+/* ======= FIN DE LOS CAMBIOS ======= */
 
 .cta-container {
     margin-top: 30px;
@@ -236,9 +242,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
-    .card {
+    .diferencias-grid .diferencia-card {
         width: 100%;
         max-width: 300px;
+        margin: 0 auto;
     }
 }
 
