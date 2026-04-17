@@ -89,3 +89,29 @@ body {
     color: #AE8D3E;
     border: 1px solid #AE8D3E;
 }
+
+/* Mensaje de éxito */
+.mensaje-exito {
+    background: #D69E2E;
+    color: #522676;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Mensaje de enviando */
+.mensaje-enviando {
+    background: #522676;
+    color: #D69E2E;
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
