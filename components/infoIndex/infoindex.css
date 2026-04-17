@@ -1,0 +1,23 @@
+:root {
+    --color-primary: #522676;
+    --color-secondary: #AE8D3E;
+    --font-family-title: 'Playfair Display', serif;
+    --font-family-general: 'Montserrat', sans-serif;
+}
+
+.text-content{
+    border: solid var(--color-secondary) 2px;
+}
+
+.card-title{
+    color: var(--color-primary);
+    font-family: var(--font-family-title);
+    font-size: 3rem;
+}
+
+.card-text{
+    font-family: var(--font-family-general);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
