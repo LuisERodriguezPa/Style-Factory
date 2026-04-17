@@ -36,25 +36,70 @@ h1, h2, h3,h4,h5,h6 {
 }
 .navbar-collapse{
     align-items: stretch;
+    height: 80px;
 }
 .navbar-nav{
     margin-left: auto;
     margin-right: 0 !important;
     align-items: center;
-    height: 80px;
 }
 .nav-item{
     height: 100%;
 }
 .nav-link {
-    color: var(--color-secundario);
+    color: #fff;
     display: flex;
     align-items: center;
     transition: color 0.3s;
     height: 100%;
 }
-.nav-link:hover {
-    background-color: #fff;
+.login{
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 40px;
+}
+.enlace_link{
+    gap: 10px;
+}
+.fa-user{
+    font-size: 1.3rem;
+    color: #fff;
+}
+.nav-link:hover, .nav-link:focus{
+    color: var(--color-secundario);
+}
+
+.dropdown-menu{
+    background-color: var(--color-primario);
+    --bs-dropdown-spacer: 0;
+    min-width: 100%;
+    border-radius: 0;
+    border: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    display: block;
+    visibility: hidden;
+    padding-top:0;
+    padding-bottom: 0;
+    width: max-content;
+}
+.dropdown-item{
+    color: #fff
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+.dropdown-item:focus, .dropdown-item:hover{
+    background-color: var(--color-primario);
+    color:var(--color-secundario);
+}
+.enlace_login{
+    margin-left: 100px;
 }
 .navbar-toggler {
     border-color: white;
@@ -62,6 +107,9 @@ h1, h2, h3,h4,h5,h6 {
 
 .navbar-toggler-icon {
     filter: invert(1);
+}
+.navbar-nav .nav-link.active, .nav-link.show{
+    color: var(--color-secundario)!important;
 }
 @media (max-width: 576px) {
     .navbar {
@@ -72,14 +120,49 @@ h1, h2, h3,h4,h5,h6 {
         align-items: flex-start;
         padding: 1rem;
     }
+    .dropdown-item:hover, .dropdown-item:focus {
+        color: var(--color-secundario);
+        background-color: transparent !important;
+    }
+    .dropdown-item:active {
+        color: var(--color-secundario);
+        background-color: transparent;
+    }
     .nav-item{
         width: 100%;
     }
+    
     .nav-link {
         width: 100%;
         padding: 10px;
     }
-    .nav-link:hover {
-    background-color: #fff;
-}
+    
+    .dropdown-menu {
+        opacity: 1;
+        transform: none;
+        visibility: visible;
+        display: none;
+        margin-left: 10px;
+    }
+
+    .dropdown-menu.show {
+        display: block;
+        padding-left: 15px;
+        background-color: rgba(255,255,255,0.05);
+    }
+    .navbar-collapse{
+        height: auto;
+    }
+    .dropdown-item {
+        padding-left: 0;
+    }
+    .login{
+        display: flex;
+        align-items: center;
+        margin-left: 0;
+    }
+    .enlace_link{
+        gap: 10px;
+    }
+    
 }
