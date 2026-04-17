@@ -1,8 +1,8 @@
 :root {
-  --color-primary: #522676;
-  --color-secondary: #AE8D3E;
-  --font-family-title: 'Playfair Display', serif;
-  --font-family-general: 'Montserrat', sans-serif;
+    --color-primary: #522676;
+    --color-secondary: #AE8D3E;
+    --font-family-title: 'Playfair Display', serif;
+    --font-family-general: 'Montserrat', sans-serif;
 }
 body {
     font-family: 'Montserrat', sans-serif;
