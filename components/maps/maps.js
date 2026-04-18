@@ -1,4 +1,3 @@
-
 // Creación del array de sucursales
 const sucursales = [
     {
@@ -109,5 +108,3 @@ function inicializacionMap() {
 
 // Hace que google lo pueda encontrar despues de cargar la pagina
 window.initMap = inicializacionMap;
-
-
