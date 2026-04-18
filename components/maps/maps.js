@@ -76,7 +76,8 @@ function inicializacionMap() {
 
             ventanaInformacion.setContent(`
                 <div style="font-family:'Montserrat',sans-serif; padding:8px; color:#111; width:220px">
-                    <div style="width:100%; height:130px; overflow:hidden; border-radius:6px; margin-bottom:8px; background:#f0f0f0; display:flex; align-items:center; justify-content:center;">
+                    <div style="width:100%; height:130px; overflow:hidden; border-radius:6px; margin-bottom:8px;
+                    background:#f0f0f0; display:flex; align-items:center; justify-content:center;">
                         <img src="${sucursal.img}" alt="${sucursal.nombre}"
                             style="max-width:100%; max-height:130px; object-fit:contain;">
                     </div>
