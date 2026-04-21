@@ -25,19 +25,20 @@ h1, h2, h3,h4,h5,h6 {
     
 }
 .div_logo{
+    height: 100%;
     display: flex;
     align-items: center;
+    padding: 10px 0;
 }
 .div_logo h1{
     color: #fff;
 }
 .navbar-brand{
     display: flex;
-    align-items: stretch;
-    height: 80px;
+    height: 100%;
     padding: 0;
 }
-.container-fluid a img{
+.div_logo a img{
     height: 100%;
     display: block;
 }
