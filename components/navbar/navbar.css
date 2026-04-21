@@ -24,24 +24,33 @@ h1, h2, h3,h4,h5,h6 {
     align-items: stretch;
     
 }
+.div_logo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+.div_logo h1{
+    color: #fff;
+}
 .navbar-brand{
     display: flex;
-    align-items: stretch;
-    height: 80px;
+    height: 100%;
     padding: 0;
 }
-.container-fluid a img{
+.div_logo a img{
     height: 100%;
     display: block;
 }
 .navbar-collapse{
     align-items: stretch;
-    height: 80px;
+    height: auto;
 }
 .navbar-nav{
     margin-left: auto;
     margin-right: 0 !important;
     align-items: center;
+    background-color: var(--color-primario);
 }
 .nav-item{
     height: 100%;
@@ -52,6 +61,7 @@ h1, h2, h3,h4,h5,h6 {
     align-items: center;
     transition: color 0.3s;
     height: 100%;
+    font-size: 20px;
 }
 .login{
     display: flex;
@@ -76,15 +86,18 @@ h1, h2, h3,h4,h5,h6 {
     min-width: 100%;
     border-radius: 0;
     border: none;
-    opacity: 0;
-    transform: translateY(10px);
     transition: all 0.3s ease;
     display: block;
-    visibility: hidden;
     padding-top:0;
     padding-bottom: 0;
     width: max-content;
+
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    visibility: hidden;
 }
+
 .dropdown-item{
     color: #fff
 }
@@ -93,9 +106,9 @@ h1, h2, h3,h4,h5,h6 {
     opacity: 1;
     transform: translateY(0);
     visibility: visible;
-}
+} 
 .dropdown-item:focus, .dropdown-item:hover{
-    background-color: var(--color-primario);
+    background-color: transparent;
     color:var(--color-secundario);
 }
 .enlace_login{
@@ -165,4 +178,35 @@ h1, h2, h3,h4,h5,h6 {
         gap: 10px;
     }
     
+}
+@media (max-width: 991px) {
+    .container-fluid{
+        padding: 0;
+    }
+    .navbar-nav{
+        align-items: center;
+    }
+    .login{
+        margin:0;
+    }
+    .nav-link{
+        justify-content: center;
+    }
+    .dropdown-menu {
+        opacity: 1;
+        transform: none;
+        visibility: visible;
+        display: none;
+       
+    }
+    .dropdown-menu.show {
+        display: block;
+        padding-left: 0;
+        background-color: rgba(255,255,255,0.05);
+    }
+    .dropdown-item{
+        display: flex;
+        justify-content: center;
+    }
+
 }
