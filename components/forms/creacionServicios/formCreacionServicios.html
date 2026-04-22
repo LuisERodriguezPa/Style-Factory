@@ -1,0 +1,54 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link rel="stylesheet" href="formCreacionServicios.css">
+
+<div class="container">
+    <div class="row">
+        <div class="col form-container">
+
+            <h2 class="titulo-form">Crear un Nuevo Servicio</h2>
+
+            <form 
+                id="formCreacionServicios" 
+                class="formulario">
+                
+                
+                <!-- action="https://formspree.io/f/mkokrkew" -->
+                <div class="input-group">
+                    <input type="text" id="nombre" required placeholder="">
+                    <label>Nombre </label>
+                    <span class="error" id="errorNombre"></span>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="descripcion" name="descripcion" required placeholder="">
+                    <label>Descripcion</label>
+                    <span class="error" id="errorDescripcion"></span>
+                </div>
+
+                <div class="input-group ultimo_input_group">
+                    <input type="text" id="precio" name="precio" required placeholder="">
+                    <label>Precio</label>
+                    <span class="error" id="errorPrecio"></span>
+                </div>
+                <div class="contenedor_subir_imagen">
+                    <label>Subir Imagen</label>
+                    <div class="caja_subir">
+                        <input type="file" id="imagen" placeholder="">
+                        <span class="error" id="errorPrecio"></span>
+                    </div>
+                </div>
+                <div class="status">
+                    <span>Status:</span>
+                    <input type="radio" id="activo" name="status" value="activo" checked>
+                    <label for="opcion1">Activo</label>
+                </div>
+                
+                <button type="submit" class="btn-enviar">Crear Servicio</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="formCreacionServicios.js"></script>
+
