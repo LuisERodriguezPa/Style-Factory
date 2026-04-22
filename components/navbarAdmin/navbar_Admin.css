@@ -6,17 +6,13 @@
 
 /* Botón hamburguesa */
 .boton-hamburguesa {
-  background-color: var(--color-principal);
-  color: var(--color-dorado);
-  border: none;
-  font-size: 28px; /* más grande */
+  color: var(--color-principal);
+  border: solid 1px var(--color-dorado);
+  font-size: 20px; /* más grande */
   padding: 12px 16px; /* más espacio interno */
-  
   cursor: pointer;
   line-height: 1.2;
 }
-
-
 
 /* Fondo morado del menú lateral */
 .menu-lateral {
