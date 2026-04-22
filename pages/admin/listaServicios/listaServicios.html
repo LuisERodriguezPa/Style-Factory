@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="/pages/admin/listaReservas/listaReservas.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/pages/admin/listaServicios//listaServicios.css"
+    />
+    <title>Lista servicios</title>
+  </head>
+
+  <body>
+    <section class="container py-5">
+      <div class="admin-lista-reservas-panel">
+        <!-- Sección: Lista de servicios -->
+        <section class="seccion-lista-reservas">
+          <div class="cabecera-lista-reservas">
+            <h2>LISTA DE RESERVAS</h2>
+            <div class="linea-cabecera"></div>
+            <button
+              type="button"
+              class="btn btn-agregar-servicio"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              title="Agregar"
+            >
+              <i class="fa-solid fa-plus" style="color: white"></i>
+            </button>
+
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2 class="modal-title fs-5 text-center card-title" >
+                      Creación de servicio
+                    </h2>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">...</div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary btn-cerrar"
+                      data-bs-dismiss="modal"
+                    >
+                      Cancelar
+                    </button>
+                    <button type="button" class="btn btn-primary btn-guardar btn-principal">
+                      Guardar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <table class="table table-striped tabla-lista-reservas" style="table-layout: fixed; width: 100%;">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>SERVICIO</th>
+                <th>DESCRIPCIÓN</th>
+                <th>ESTADO</th>
+                <th>ACCIONES</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#ID-01</td>
+                <td>Corte de cabello</td>
+                <td>
+                 <div class="text-truncate">
+                   Renueva tu estilo con un corte moderno y personalizado que
+                  resalta tu imagen y se adapta a tu tipo de rostro.
+                 </div>
+                </td>
+                <td><span class="badge-estado confirmada">Activo</span></td>
+                <td class="celda-acciones">
+                  <button class="btn-accion" title="Editar">
+                    <i class="fa-solid fa-pen"></i>
+                  </button>
+                  <button class="btn-accion" title="Eliminar">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#ID-02</td>
+                <td>Tinte y coloración</td>
+                <td style="width: 80px">
+                  <div class="text-truncate">
+                    Transforma tu look con colores vibrantes o tonos naturales,
+                    aplicados con técnicas profesionales que cuidan tu cabello.
+                  </div>
+                </td>
+                <td><span class="badge-estado cancelada">Inactivo</span></td>
+                <td class="celda-acciones">
+                  <button class="btn-accion" title="Editar">
+                    <i class="fa-solid fa-pen"></i>
+                  </button>
+                  <button class="btn-accion" title="Eliminar">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#ID-03</td>
+                <td>Tratamiento keratina</td>
+                <td>
+                  <div class="text-truncate">Reduce el frizz y aporta brillo intenso con un tratamiento que
+                  deja tu cabello suave, manejable y saludable</div>
+                </td>
+                <td><span class="badge-estado confirmada">Activo</span></td>
+                <td class="celda-acciones">
+                  <button class="btn-accion" title="Editar">
+                    <i class="fa-solid fa-pen"></i>
+                  </button>
+                  <button class="btn-accion" title="Eliminar">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#ID-04</td>
+                <td>Barba y afeitado</td>
+                <td>
+                 <div class="text-truncate">
+                   Dale forma y estilo a tu barba con un afeitado preciso y
+                  técnicas que cuidan tu piel.
+                 </div>
+  
+                </td>
+                <td><span class="badge-estado cancelada">Inactivo</span></td>
+                <td class="celda-acciones">
+                  <button class="btn-accion" title="Editar">
+                    <i class="fa-solid fa-pen"></i>
+                  </button>
+                  <button class="btn-accion" title="Eliminar">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#ID-05</td>
+                <td>Peinado para eventos</td>
+                <td >
+                 <div class="text-truncate">
+                   Luce espectacular en cualquier ocasión con peinados elegantes
+                  y duraderos diseñados para resaltar tu belleza.
+                 </div>
+                </td>
+                <td><span class="badge-estado confirmada">Activo</span></td>
+                <td class="celda-acciones">
+                  <button class="btn-accion" title="Editar">
+                    <i class="fa-solid fa-pen"></i>
+                  </button>
+                  <button class="btn-accion" title="Eliminar">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
