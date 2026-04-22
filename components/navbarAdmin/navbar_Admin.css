@@ -1,0 +1,77 @@
+:root {
+  --color-principal: #3e0065; /* morado */
+  --color-dorado: #AE8D3E;   /* dorado */
+  --color-cuadro: #f5f5f5;   /* gris claro */
+}
+
+/* Botón hamburguesa */
+.boton-hamburguesa {
+  background-color: var(--color-principal);
+  color: var(--color-dorado);
+  border: none;
+  font-size: 28px; /* más grande */
+  padding: 12px 16px; /* más espacio interno */
+  
+  cursor: pointer;
+  line-height: 1.2;
+}
+
+
+
+/* Fondo morado del menú lateral */
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  left: -260px; /* escondido */
+  width: 260px;
+  height: 100%;
+  background-color: var(--color-principal);
+  box-shadow: 0 0 15px 0 var(--color-principal);
+  padding-left: 25px;
+  transition: left 1s ease; /* más lento */
+}
+
+/* Al pasar el cursor por el botón o el menú */
+.boton-hamburguesa:hover + .menu-lateral,
+.menu-lateral:hover {
+  left: 0; /* se despliega */
+}
+
+.offcanvas {
+  transition: transform 1s ease-in-out !important; /* más lento y suave */
+}
+
+/* Título dorado */
+.menu-titulo {
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: var(--color-dorado);
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 25px;
+}
+
+/* Lista de botones */
+.lista-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.boton-menu {
+  display: block;
+  margin: 15px 0; /* más separación entre cuadros */
+  padding: 14px;
+  text-decoration: none;
+  color: var(--color-dorado);
+  background-color: var(--color-cuadro); /* gris claro */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  font-family: 'Playfair Display', serif;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.boton-menu:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+}
+
