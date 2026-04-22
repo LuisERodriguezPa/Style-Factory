@@ -64,7 +64,7 @@ botonEnviar.addEventListener("click", function(event){
             status: status
         }
         listaDeServicios.push(servicio);
-        console.log(JSON.stringify(listaDeServicios));
+        console.log(listaDeServicios);
         alert("Servicio Agregado");
         document.getElementById("formCreacionServicios").reset();
     }else{
@@ -73,5 +73,7 @@ botonEnviar.addEventListener("click", function(event){
     }
    
 })
+
+localStorage.setItem("Lista de Servicios",JSON.stringify(listaDeServicios) )
 
 
