@@ -1,25 +1,20 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 <link rel="stylesheet" href="formCreacionServicios.css">
+
 <div class="container">
     <div class="row">
-
-        <div class="col container_imagen">
-            <img src="https://i.pinimg.com/736x/13/d9/c9/13d9c9557c20368b767a7675b6e5ade3.jpg"
-                class="d-block w-100" alt="Imagen Formulario de creacion de servicios" />
-        </div>
-
-        <section class="col form-container">
+        <div class="col form-container">
 
             <h2 class="titulo-form">Crear un Nuevo Servicio</h2>
 
             <form 
-                id="formReserva" 
-                class="formulario"
-                action="https://formspree.io/f/mkokrkew"
-                method="POST">
-
+                id="formCreacionServicios" 
+                class="formulario">
+                
+                
+                <!-- action="https://formspree.io/f/mkokrkew" -->
                 <div class="input-group">
-                    <input type="text" id="nombre" name="nombre" required placeholder="">
+                    <input type="text" id="nombre" required placeholder="">
                     <label>Nombre </label>
                     <span class="error" id="errorNombre"></span>
                 </div>
@@ -35,20 +30,25 @@
                     <label>Precio</label>
                     <span class="error" id="errorPrecio"></span>
                 </div>
-                
+                <div class="contenedor_subir_imagen">
+                    <label>Subir Imagen</label>
+                    <div class="caja_subir">
+                        <input type="file" id="imagen" placeholder="">
+                        <span class="error" id="errorPrecio"></span>
+                    </div>
+                </div>
                 <div class="status">
                     <span>Status:</span>
-                    <input type="radio" id="opcion1" name="grupo1" value="activo" checked>
+                    <input type="radio" id="activo" name="status" value="activo" checked>
                     <label for="opcion1">Activo</label>
                 </div>
                 
                 <button type="submit" class="btn-enviar">Crear Servicio</button>
 
             </form>
-
-        </section>
+        </div>
     </div>
 </div>
 
-<script src="formReserva.js"></script>
+<script src="formCreacionServicios.js"></script>
 
