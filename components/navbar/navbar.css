@@ -28,7 +28,7 @@ h1, h2, h3,h4,h5,h6 {
     height: 100%;
     display: flex;
     align-items: center;
-    padding: 10px 0;
+    padding: 10px;
 }
 .div_logo h1{
     color: #fff;
@@ -125,6 +125,9 @@ h1, h2, h3,h4,h5,h6 {
     color: var(--color-secundario)!important;
 }
 @media (max-width: 576px) {
+    .navbar-toggler{
+        margin-right: 15px;
+    }
     .navbar {
         height: auto;
     }
@@ -132,6 +135,9 @@ h1, h2, h3,h4,h5,h6 {
         height: auto;
         align-items: flex-start;
         padding: 1rem;
+    }
+    .div_logo a img{
+        height: 60px;
     }
     .dropdown-item:hover, .dropdown-item:focus {
         color: var(--color-secundario);
@@ -180,11 +186,24 @@ h1, h2, h3,h4,h5,h6 {
     
 }
 @media (max-width: 991px) {
+    .navbar-toggler{
+        margin-right: 15px;
+    }
+    .navbar {
+        height: auto;
+    }
     .container-fluid{
         padding: 0;
     }
+    .navbar-collapse{
+        height: auto;
+    }
     .navbar-nav{
+        height: auto;
         align-items: center;
+    }
+    .div_logo a img{
+        height: 60px;
     }
     .login{
         margin:0;

@@ -2,7 +2,7 @@
 fetch('components/navbar/navbar.html')
     .then(res => res.text())
     .then(html => {
-        document.getElementById('navbar-placeholder').innerHTML = html;
+        document.getElementById('header').innerHTML = html;
     })
     .catch(err => console.error('Error cargando el navbar:', err));
 
