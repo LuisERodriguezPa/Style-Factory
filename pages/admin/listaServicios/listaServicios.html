@@ -13,14 +13,17 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-
     <link
       rel="stylesheet"
-      href="/pages/admin/listaReservas/listaReservas.css"
+      href="/components/forms/creacionServicios/formCreacionServicios.css"
     />
     <link
       rel="stylesheet"
       href="/pages/admin/listaServicios//listaServicios.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/pages/admin/listaReservas/listaReservas.css"
     />
     <title>Lista servicios</title>
   </head>
@@ -59,12 +62,14 @@
                     </h2>
                     <button
                       type="button"
-                      class="btn-close"
+                      class="btn-close" 
                       data-bs-dismiss="modal"
                       aria-label="Close"
                     ></button>
                   </div>
-                  <div class="modal-body">...</div>
+                  <div class="modal-body">
+                     <div id="form-services"></div>
+                  </div>
                   <div class="modal-footer">
                     <button
                       type="button"
@@ -73,7 +78,7 @@
                     >
                       Cancelar
                     </button>
-                    <button type="button" class="btn btn-primary btn-guardar btn-principal">
+                    <button type="button" class="btn btn-primary btn-guardar">
                       Guardar
                     </button>
                   </div>
@@ -196,5 +201,6 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="listaServicios.js"></script>
   </body>
 </html>
