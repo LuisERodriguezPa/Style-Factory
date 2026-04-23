@@ -102,12 +102,21 @@ function renderizarCatalogo() {
                     <h3 class="card-titulo">${producto.nombre}</h3>
                     <p class="card-descripcion">${producto.descripcion}</p>
                     <div class="card-precio">$${precioFormateado}</div>
+                    <button class="btn-reservar" data-id="${producto.id}">RESERVAR</button>
                 </div>
             </div>
         `;
     }).join('');
     
     container.innerHTML = html;
+
+    // Agregar eventos a los botones de reservar
+    document.querySelectorAll('.btn-reservar').forEach(boton => {
+        boton.addEventListener('click', function() {
+            const id = this.getAttribute('data-id');
+            alert(`Reservaste el servicio ID: ${id}. Próximamente disponible.`);
+        });
+    });
 }
 
 document.addEventListener('DOMContentLoaded', renderizarCatalogo);
