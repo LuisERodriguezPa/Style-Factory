@@ -70,6 +70,11 @@ function validarFormulario() {
         limpiarError('errorPrecio');
        
     }
+    if(isNaN(Number(precio)) || Number(precio)<= 0){
+         mostrarError('errorPrecio', '¡Introduzca un precio Valido!');
+        esValido = false
+    }
+   
 }
 
 let imagenURL = ""; 
@@ -136,7 +141,7 @@ botonEnviar.addEventListener("click", function(event){
         preview.style.display = "none";
         imagenBase64 = "";
     }else{
-        alert("El formulario esta incompleto")
+        alert("El formulario esta Incorrecto")
         
     }
     localStorage.setItem("Lista de Servicios",JSON.stringify(listaDeServicios))
