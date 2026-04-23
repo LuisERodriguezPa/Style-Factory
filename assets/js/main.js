@@ -1,5 +1,5 @@
 
-fetch('components/navbar/navbar.html')
+fetch('/components/navbar/navbar.html')
     .then(res => res.text())
     .then(html => {
         document.getElementById('header').innerHTML = html;
@@ -11,7 +11,7 @@ fetch('components/bannerInicio/bannerInicio.html')
     .then(html => {
         document.getElementById('bannerInicio-placeholder').innerHTML = html;
     })
-    .catch(err => console.error('Error cargando el información index:', err));
+    .catch(err => console.error('Error cargando el banner en index:', err));
 
 fetch('components/infoIndex/infoIndex.html')
     .then(res => res.text())
