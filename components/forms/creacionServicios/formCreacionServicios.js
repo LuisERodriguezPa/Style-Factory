@@ -1,10 +1,33 @@
+import productos from '../../../pages/catalogoServicios/catalogoServicios.js';
 let nombre;
 let descripcion;;
 let precio;
-let status; 
-let esValido;
-const listaDeServicios = [];
+let status;
+let esValido; 
 const botonEnviar = document.querySelector(".btn-enviar");
+const inputImagen = document.getElementById('inputImagen');
+const preview = document.getElementById('preview');
+const formulario = document.getElementById("formCreacionServicios");
+let imagenBase64 = "";
+let listaDeServicios = JSON.parse(localStorage.getItem("Lista de Servicios")) || [];
+let existe;
+
+if(listaDeServicios.length == 0){
+    productos.forEach(function(elemento){
+        listaDeServicios.push(elemento);
+    })
+    localStorage.setItem("Lista de Servicios",JSON.stringify(listaDeServicios))
+}
+// else{ 
+//     productos.forEach(function(elemento){
+//         existe = servicios.some(servicio => servicio.nombre === elemento.nombre);
+//         console.log(existe);
+//         if(!existe){
+//             listaDeServicios.push(elemento)
+//         }
+    
+//     })
+// }
 
 function validar(nombre) {
    return nombre.trim() !== "";
@@ -49,6 +72,24 @@ function validarFormulario() {
     }
 }
 
+inputImagen.addEventListener("change", function () {
+    const archivo = this.files[0];
+
+    if (archivo) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            imagenBase64 = e.target.result;
+
+            // Mostrar preview
+            preview.src = imagenBase64;
+            preview.style.display = "block";
+        };
+
+        reader.readAsDataURL(archivo);
+    }
+});
+
 botonEnviar.addEventListener("click", function(event){
     event.preventDefault();
     nombre = document.querySelector("#nombre").value;
@@ -61,19 +102,25 @@ botonEnviar.addEventListener("click", function(event){
             nombre: nombre,
             descripcion: descripcion,
             precio: precio,
-            status: status
+            status: status,
+            imagen: imagenBase64
         }
-        listaDeServicios.push(servicio);
+         
+        existe = listaDeServicios.some(elemento => elemento.nombre === servicio.nombre);
+        if(!existe){
+             listaDeServicios.push(servicio)
+             alert("Servicio Agregado");
+        }else{
+            alert("El Servicio ya Existe")
+        }
         console.log(listaDeServicios);
-        alert("Servicio Agregado");
+        
         document.getElementById("formCreacionServicios").reset();
+        preview.style.display = "none";
+        imagenBase64 = "";
     }else{
         alert("El formulario esta incompleto")
         
     }
-   
+    localStorage.setItem("Lista de Servicios",JSON.stringify(listaDeServicios))
 })
-
-localStorage.setItem("Lista de Servicios",JSON.stringify(listaDeServicios) )
-
-

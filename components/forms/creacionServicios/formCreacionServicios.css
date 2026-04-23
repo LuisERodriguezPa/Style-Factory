@@ -76,8 +76,10 @@ body {
   transition: 0.3s;
   background-color: #f9f9f9;
 }
-
-
+#preview{
+    max-width: 200px; 
+    display: none;
+}
 /* Animación de etiquetas generales */
 .input-group input:focus + label,
 .input-group input:not(:placeholder-shown) + label {
@@ -114,7 +116,7 @@ body {
     border: 1px solid #AE8D3E;
 }
 
-/* Mensaje de éxito */
+/* Mensaje de éxito
 .mensaje-exito {
     background: #D69E2E;
     color: #522676;
@@ -125,9 +127,10 @@ body {
     margin-bottom: 10px;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
-}
+}*/
 
 /* Mensaje de enviando */
+/*
 .mensaje-enviando {
     background: #522676;
     color: #D69E2E;
@@ -138,4 +141,4 @@ body {
     margin-bottom: 10px;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
-}
+} */
