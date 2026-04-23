@@ -4,7 +4,7 @@ const productos = [
         nombre: "Corte de Cabello Premium",
         descripcion: "Corte moderno con técnicas personalizadas según tu tipo de cabello.",
         precio: 45000,
-        imagen: "./imagesCatalogoServicios/cortePremium.png",
+        imagen: "https://res.cloudinary.com/diq2bkb49/image/upload/v1776957776/cortePremium_engl79.png",
         status: true
     },
     {
@@ -12,7 +12,7 @@ const productos = [
         nombre: "Tinte y Coloración",
         descripcion: "Coloración de alta calidad con marcas premium. Resultados duraderos.",
         precio: 120000,
-        imagen: "./imagesCatalogoServicios/tinteColoracion.png",
+        imagen: "https://res.cloudinary.com/diq2bkb49/image/upload/v1776957782/tinteColoracion_xlsf5v.png",
         status: true
     },
     {
@@ -20,7 +20,7 @@ const productos = [
         nombre: "Tratamiento de Keratina",
         descripcion: "Alisado profundo que elimina el frizz y deja el cabello sedoso.",
         precio: 180000,
-        imagen: "./imagesCatalogoServicios/keratina.png",
+        imagen: "https://res.cloudinary.com/diq2bkb49/image/upload/v1776957777/keratina_bjqvof.png",
         status: true
     },
     {
@@ -28,7 +28,7 @@ const productos = [
         nombre: "Barba y Afeitado",
         descripcion: "Servicio completo de perfilado de barba y afeitado clásico.",
         precio: 35000,
-        imagen: "./imagesCatalogoServicios/barbaAfeitado.png",
+        imagen: "https://res.cloudinary.com/diq2bkb49/image/upload/v1776957775/barbaAfeitado_fcacso.png",
         status: true
     },
     {
@@ -36,7 +36,7 @@ const productos = [
         nombre: "Peinado para Eventos",
         descripcion: "Peinados profesionales para bodas, graduaciones y eventos especiales.",
         precio: 80000,
-        imagen: "./imagesCatalogoServicios/peinadoEventos.png",
+        imagen: "https://res.cloudinary.com/diq2bkb49/image/upload/v1776957782/peinadoEventos_bk9cyr.png",
         status: true
     },
     {
@@ -44,7 +44,7 @@ const productos = [
         nombre: "Mechas y Reflejos",
         descripcion: "Técnicas de mechas californianas, babylights y reflejos.",
         precio: 150000,
-        imagen: "./imagesCatalogoServicios/mechasReflejos.png",
+        imagen: "https://res.cloudinary.com/diq2bkb49/image/upload/v1776957780/mechasReflejos_p5hod7.png",
         status: true
     },
     {
@@ -52,7 +52,7 @@ const productos = [
         nombre: "Tratamiento Capilar",
         descripcion: "Hidratación y nutrición profunda para cabello maltratado.",
         precio: 65000,
-        imagen: "./imagesCatalogoServicios/tratamientoCapilar.png",
+        imagen: "https://res.cloudinary.com/diq2bkb49/image/upload/v1776957783/tratamientoCapilar_mqkb13.png",
         status: true
     },
     {
@@ -60,7 +60,7 @@ const productos = [
         nombre: "Cepillado Brasileño",
         descripcion: "Alisado progresivo que reduce el volumen y da brillo.",
         precio: 160000,
-        imagen: "./imagesCatalogoServicios/cepilladoBrasileño.png",
+        imagen: "https://res.cloudinary.com/diq2bkb49/image/upload/v1776957775/cepilladoBrasile%C3%B1o_ela99r.png",
         status: true
     },
     {
@@ -68,7 +68,7 @@ const productos = [
         nombre: "Maquillaje Profesional",
         descripcion: "Maquillaje para ocasiones especiales con productos de alta calidad.",
         precio: 90000,
-        imagen: "./imagesCatalogoServicios/maquillajeProfesional.png",
+        imagen: "https://res.cloudinary.com/diq2bkb49/image/upload/v1776957779/maquillajeProfesional_h9vo1k.png",
         status: true
     },
     {
@@ -76,7 +76,7 @@ const productos = [
         nombre: "Limpieza Facial",
         descripcion: "Tratamiento facial profundo para eliminar impurezas y revitalizar.",
         precio: 70000,
-        imagen: "./imagesCatalogoServicios/limpiezaFacial.png",
+        imagen: "https://res.cloudinary.com/diq2bkb49/image/upload/v1776957778/limpiezaFacial_fmvrnn.png",
         status: true
     }
 ];
