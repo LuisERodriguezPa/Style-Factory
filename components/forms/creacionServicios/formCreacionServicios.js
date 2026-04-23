@@ -63,30 +63,46 @@ function validarFormulario() {
         limpiarError('errorDescripcion');
         
     }
-    if (!validar(precio)) {
-        mostrarError('errorPrecio', 'El precio es obligatorio');
-        esValido = false;
-    } else {
+    if(isNaN(Number(precio)) || Number(precio)<= 0){
+         mostrarError('errorPrecio', '¡Introduzca un precio Valido!');
+        esValido = false
+    }else {
         limpiarError('errorPrecio');
-       
     }
 }
 
-inputImagen.addEventListener("change", function () {
+let imagenURL = ""; 
+
+inputImagen.addEventListener("change", async function () {
     const archivo = this.files[0];
 
-    if (archivo) {
-        const reader = new FileReader();
+    if (!archivo) 
+        return;
 
-        reader.onload = function (e) {
-            imagenBase64 = e.target.result;
+    const formData = new FormData();
+    formData.append("file", archivo);
+    formData.append("upload_preset", "servicios_app"); //  tu preset
 
-            // Mostrar preview
-            preview.src = imagenBase64;
-            preview.style.display = "block";
-        };
+    try {
+        const respuesta = await fetch(
+            "https://api.cloudinary.com/v1_1/dxp3axcje/image/upload",
+            {
+                method: "POST",
+                body: formData
+            }
+        );
 
-        reader.readAsDataURL(archivo);
+        const data = await respuesta.json();
+
+        imagenURL = data.secure_url; 
+
+        // Preview
+        preview.src = imagenURL;
+        preview.style.display = "block";
+        console.log("Imagen subida:", imagenURL);
+
+    } catch (error) {
+        console.error("Error subiendo imagen:", error);
     }
 });
 
@@ -103,7 +119,7 @@ botonEnviar.addEventListener("click", function(event){
             descripcion: descripcion,
             precio: precio,
             status: status,
-            imagen: imagenBase64
+            imagen: imagenURL 
         }
          
         existe = listaDeServicios.some(elemento => elemento.nombre === servicio.nombre);
@@ -119,7 +135,7 @@ botonEnviar.addEventListener("click", function(event){
         preview.style.display = "none";
         imagenBase64 = "";
     }else{
-        alert("El formulario esta incompleto")
+        alert("El formulario esta Incorrecto")
         
     }
     localStorage.setItem("Lista de Servicios",JSON.stringify(listaDeServicios))
