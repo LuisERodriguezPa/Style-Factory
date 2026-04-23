@@ -72,7 +72,7 @@ function validarFormulario() {
     }
 }
 
-let imagenURL = ""; // ahora guardamos URL, no base64
+let imagenURL = ""; 
 
 inputImagen.addEventListener("change", async function () {
     const archivo = this.files[0];
