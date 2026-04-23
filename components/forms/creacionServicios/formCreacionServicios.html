@@ -13,11 +13,18 @@
                 <span class="error" id="errorNombre"></span>
             </div>
 
-            <div class="input-group">
-                <input type="text" id="descripcion" name="descripcion" required placeholder="">
-                <label>Descripcion</label>
-                <span class="error" id="errorDescripcion"></span>
-            </div>
+            <form 
+                id="formCreacionServicios" 
+                class="formulario"
+                enctype="multipart/form-data">
+                
+                
+                <!-- action="https://formspree.io/f/mkokrkew" -->
+                <div class="input-group">
+                    <input type="text" id="nombre" required placeholder="">
+                    <label>Nombre </label>
+                    <span class="error" id="errorNombre"></span>
+                </div>
 
             <div class="input-group ultimo_input_group">
                 <input type="text" id="precio" name="precio" required placeholder="">
@@ -41,5 +48,7 @@
 
         </form>
     </div>
-<script src="formCreacionServicios.js"></script>
+</div>
+
+<script type="module" src="formCreacionServicios.js"></script>
 
