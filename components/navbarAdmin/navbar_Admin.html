@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="navbar_Admin.css">
-    <title>Navbar Admin</title>
-</head>
-<body>
 
 <!-- Botón hamburguesa independiente -->
 <button class="boton-hamburguesa" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral" aria-controls="menuLateral">
@@ -25,35 +13,9 @@
   </div>
   <div class="offcanvas-body">
     <ul class="lista-menu">
-      <li><a class="boton-menu" href="#">Panel</a></li>
-      <li><a class="boton-menu" href="#">Servicios</a></li>
-      <li><a class="boton-menu" href="#">Reservas</a></li>
+      <li><a class="boton-menu" href="/pages/admin/panelDeControl/panelControl.html">Panel</a></li>
+      <li><a class="boton-menu" href="/pages/admin/listaServicios/listaServicios.html">Servicios</a></li>
+      <li><a class="boton-menu" href="/pages/admin/listaReservas/listaReservas.html">Reservas</a></li>
     </ul>
   </div>
 </div>
-
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  
-
- <script>
-    const boton = document.querySelector('.boton-hamburguesa');
-    const menu = document.querySelector('#menuLateral');
-
-    // Al pasar el cursor por el botón hamburguesa
-    boton.addEventListener('mouseenter', () => {
-      const bsOffcanvas = new bootstrap.Offcanvas(menu);
-      bsOffcanvas.show();
-    });
-
-    // Al salir el cursor del menú, se cierra
-    menu.addEventListener('mouseleave', () => {
-      const bsOffcanvas = new bootstrap.Offcanvas(menu);
-      bsOffcanvas.hide();
-    });
-  </script>
-
-  
-</body>
-</html>
