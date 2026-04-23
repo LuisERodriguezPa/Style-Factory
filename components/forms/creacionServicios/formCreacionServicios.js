@@ -16,7 +16,7 @@ if(listaDeServicios.length == 0){
     productos.forEach(function(elemento){
         listaDeServicios.push(elemento);
     })
-    localStorage.setItem("Lista de Servicios",JSON.stringify(listaDeServicios))
+    localStorage.setItem("ListaServicios",JSON.stringify(listaDeServicios))
 }
 // else{ 
 //     productos.forEach(function(elemento){
