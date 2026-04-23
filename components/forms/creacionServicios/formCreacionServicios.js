@@ -63,18 +63,12 @@ function validarFormulario() {
         limpiarError('errorDescripcion');
         
     }
-    if (!validar(precio)) {
-        mostrarError('errorPrecio', 'El precio es obligatorio');
-        esValido = false;
-    } else {
-        limpiarError('errorPrecio');
-       
-    }
     if(isNaN(Number(precio)) || Number(precio)<= 0){
          mostrarError('errorPrecio', '¡Introduzca un precio Valido!');
         esValido = false
+    }else {
+        limpiarError('errorPrecio');
     }
-   
 }
 
 let imagenURL = ""; 
