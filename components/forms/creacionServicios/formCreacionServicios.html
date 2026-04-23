@@ -9,7 +9,8 @@
 
             <form 
                 id="formCreacionServicios" 
-                class="formulario">
+                class="formulario"
+                enctype="multipart/form-data">
                 
                 
                 <!-- action="https://formspree.io/f/mkokrkew" -->
@@ -33,7 +34,8 @@
                 <div class="contenedor_subir_imagen">
                     <label>Subir Imagen</label>
                     <div class="caja_subir">
-                        <input type="file" id="imagen" placeholder="">
+                        <input type="file" id="inputImagen" name="imagen"  accept="image/*">
+                        <img id="preview" src="" alt="Vista previa">
                         <span class="error" id="errorPrecio"></span>
                     </div>
                 </div>
@@ -50,5 +52,5 @@
     </div>
 </div>
 
-<script src="formCreacionServicios.js"></script>
+<script type="module" src="formCreacionServicios.js"></script>
 

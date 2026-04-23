@@ -80,7 +80,6 @@ const productos = [
         status: true
     }
 ];
-
 function renderizarCatalogo() {
     const container = document.getElementById('cards-container');
     
@@ -118,5 +117,5 @@ function renderizarCatalogo() {
         });
     });
 }
-
 document.addEventListener('DOMContentLoaded', renderizarCatalogo);
+export default productos;
