@@ -1,7 +1,7 @@
 :root {
-  --color-principal: #522676; /* morado */
-  --color-dorado: #AE8D3E;   /* dorado */
-  --color-cuadro: #f5f5f5;   /* gris claro */
+  --color-principal: #522676; 
+  --color-dorado: #AE8D3E;   
+  --color-cuadro: #f5f5f5;   
 }
 
 /* Botón hamburguesa */
@@ -18,7 +18,7 @@
 
 
 
-/* Fondo morado del menú lateral */
+
 .menu-lateral {
   position: fixed;
   top: 0;
@@ -30,25 +30,25 @@
   padding-left: 25px;
   transition: left 1s ease; }
 
-/* Al pasar el cursor por el botón o el menú */
-.boton-hamburguesa:hover + .menu-lateral,
+
+  .boton-hamburguesa:hover + .menu-lateral,
 .menu-lateral:hover {
-  left: 0; /* se despliega */
+  left: 0; 
 }
 
 .offcanvas {
-  transition: transform 1s ease-in-out !important; /* más lento y suave */
+  transition: transform 1s ease-in-out !important;
 }
 
 .logo-menu {
-  width: 150px;       /* tamaño del logo */
-  margin-bottom: 20px; /* espacio debajo del logo */
+  width: 150px;       
+  margin-bottom: 20px; 
   display: block;
   margin-left: 0;
-  margin-right: auto; /* centra el logo */
+  margin-right: auto; 
 }
 
-/* Título dorado */
+
 .menu-titulo {
   font-weight: bold;
   font-size: 1.6rem;
@@ -57,7 +57,7 @@
   margin-bottom: 25px;
 }
 
-/* Lista de botones */
+
 .lista-menu {
   list-style: none;
   padding: 0;
@@ -65,17 +65,17 @@
 }
 
 .boton-menu {
-   display: flex; /* para alinear ícono y texto */
+   display: flex; 
   align-items: center;
-  margin: 25px 0; /* más separación entre botones */
+  margin: 25px 0; 
   padding: 14px;
   text-decoration: none;
   color: var(--color-dorado);
-  font-size: 22px; /* letras más grandes */
+  font-size: 22px; 
   font-family: 'Playfair Display', serif;
-  background-color: transparent; /* quita fondo blanco/morado */
-  border: none; /* sin borde */
-  box-shadow: none; /* sin sombra */
+  background-color: transparent; 
+  border: none; 
+  box-shadow: none; 
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -85,11 +85,11 @@
 }
 
 .boton-salir {
-  margin-top: auto;              /* lo empuja al final */
+  margin-top: auto;              
   display: flex;
   align-items: center;
-  justify-content: flex-end;     /* lo pega al borde derecho */
-  font-size: 26px;               /* ícono más grande */
+  justify-content: flex-end;     
+  font-size: 26px;               
   color: var(--color-dorado);
   background: none;
   border: none;
@@ -97,5 +97,5 @@
 }
 
 .boton-salir:hover {
-  color: black;                  /* efecto hover */
+  color: black;                  
 }
