@@ -1,3 +1,18 @@
+if (document.getElementById('cards-container')) {
+    fetch('/components/navbar/navbar.html')
+        .then(res => res.text())
+        .then(html => { document.getElementById('header').innerHTML = html; })
+        .catch(err => console.error('Error cargando el navbar:', err));
+
+    fetch('/components/footer/footer.html')
+        .then(res => res.text())
+        .then(html => { document.getElementById('footer-placeholder').innerHTML = html; })
+        .catch(err => console.error('Error cargando el footer:', err));
+
+    document.addEventListener('DOMContentLoaded', renderizarCatalogo);
+}
+
+// Array con los 10 productos iniciales
 const productos = [
     {
         id: 1,
@@ -80,20 +95,34 @@ const productos = [
         status: true
     }
 ];
+
+// Lee del localStorage y renderiza las cards en el DOM.
+// Si el localStorage esta vacio, usa el array hardcodeado como respaldo.
 function renderizarCatalogo() {
     const container = document.getElementById('cards-container');
     
+    // Si el contenedor no existe no tiene nada que renderizar
     if (!container) {
         console.error("No se encontró el contenedor 'cards-container'");
         return;
     }
+
+    // Lee la lista del localStorage, si esta vacia, usa los productos iniciales
+    const lista = JSON.parse(localStorage.getItem("Lista de Servicios")) || productos;
+
     
-    // Filtrar solo los productos activos
-    const productosActivos = productos.filter(producto => producto.status === true);
+    console.log("Lista desde localStorage:", lista)
+    console.log("Total items:", lista.length)
+
+    // Filtra solo los productos activos
+    const productosActivos = lista.filter(producto => {
+    return producto.status === true || producto.status === "true";
+    });
     
-    // Generar el HTML con map()
+    // Genera el HTML de cada card y lo inserta en el contenedor/
     const html = productosActivos.map(producto => {
-        const precioFormateado = producto.precio.toLocaleString('es-CO');
+        // Formatea el precio con separadores de miles en pesos Colombianos
+        const precioFormateado = Number(producto.precio).toLocaleString('es-CO');
         return `
             <div class="card-servicio">
                 <img src="${producto.imagen}" alt="${producto.nombre}" class="card-imagen">
@@ -106,10 +135,11 @@ function renderizarCatalogo() {
             </div>
         `;
     }).join('');
-    
+
+    // Inserta las cards en el DOM
     container.innerHTML = html;
 
-    // Agregar eventos a los botones de reservar
+    // Agrega el evento click a cada boton de reservar
     document.querySelectorAll('.btn-reservar').forEach(boton => {
         boton.addEventListener('click', function() {
             const id = this.getAttribute('data-id');
@@ -117,5 +147,9 @@ function renderizarCatalogo() {
         });
     });
 }
+
+// Ejecuta el renderizado cuando el DOM este completamente cargado.
 document.addEventListener('DOMContentLoaded', renderizarCatalogo);
+
+// Exporta el array
 export default productos;
