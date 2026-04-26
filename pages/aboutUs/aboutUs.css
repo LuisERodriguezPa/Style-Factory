@@ -42,59 +42,61 @@ h6 {
     font-size: 2.5rem;
 }
 
-.card.team-card {
-  padding: 0;
-  background: white;
-   border-radius: 15px;
+
+:root {
+  --color-primary: #522676;
+  --color-secondary: #AE8D3E;
+  --font-family-title: 'Playfair Display', serif;
+  --font-family-general: 'Montserrat', sans-serif;
 }
 
+/* CARD */
 .team-card {
-  border: none;
-  border-radius: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 2px solid #AE8D3E;
-  
+  border-radius: 16px;
+  overflow: hidden;
+  background: radial-gradient(circle, rgba(174,141,62,0.2), transparent);
+  transition: 0.3s ease;
 }
-    
 
 .team-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(82, 38, 118, 0.25);
 }
 
+/* CONTENEDOR IMAGEN */
+.img-container {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* IMAGEN ADAPTADA */
+.team-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 🔥 esto hace que se ajuste bien */
+  transition: transform 0.4s ease;
+}
+
+/* BORDE DORADO */
+.img-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 3px solid var(--color-secondary);
+  pointer-events: none;
+}
+
+/* HOVER SUAVE */
+.team-card:hover .team-img {
+  transform: scale(1.05);
+}
+
+/* TEXTOS */
 .card-title {
-    font-family: 'Playfair Display', serif;
-    color: #522676;
-}
-
-.card-text {
-  color: #555;
-  font-size: 0.9rem;
-  cursor: pointer;
-}
-
-.btn-linkedin {
-    background-color: #522676;
-    color: white;
-    border-radius: 20px;
-    padding: 5px 15px;
-}
-
-.btn-linkedin:hover {
-    background-color: #3b1a56;
-    color: white;
-}
-
-.btn-github {
-    border: 1px solid #AE8D3E;
-    color: #AE8D3E;
-    border-radius: 20px;
-    padding: 5px 15px;
-}
-
-.btn-github:hover {
-    background-color: #AE8D3E;
-    color: white;
+  font-family: var(--font-family-title);
+  color: var(--color-primary);
 }
 
 .descripcion {
@@ -105,10 +107,39 @@ h6 {
     display: block;
 }
 
+.rol {
+  color: var(--color-secondary);
+  cursor: pointer;
+}
+
 .rol:hover + .descripcion {
+ 
   opacity: 1;
   max-height: 100px;
   margin-top: 5px;
+}
+
+/* BOTONES */
+.btn-linkedin {
+  background-color: var(--color-primary);
+  color: #fff;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.btn-github {
+  background-color: var(--color-secondary);
+  color: #fff;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.btn-linkedin:hover {
+  background-color: #3d1c5a;
+}
+
+.btn-github:hover {
+  background-color: #8a6f2f;
 }
 
 /* Estilo uniforme para las tarjetas de misión y visión */
