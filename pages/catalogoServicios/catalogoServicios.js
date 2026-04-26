@@ -1,10 +1,25 @@
+if (document.getElementById('cards-container')) {
+    fetch('/components/navbar/navbar.html')
+        .then(res => res.text())
+        .then(html => { document.getElementById('header').innerHTML = html; })
+        .catch(err => console.error('Error cargando el navbar:', err));
+
+    fetch('/components/footer/footer.html')
+        .then(res => res.text())
+        .then(html => { document.getElementById('footer-placeholder').innerHTML = html; })
+        .catch(err => console.error('Error cargando el footer:', err));
+
+    document.addEventListener('DOMContentLoaded', renderizarCatalogo);
+}
+
+// Array con los 10 productos iniciales
 const productos = [
     {
         id: 1,
         nombre: "Corte de Cabello Premium",
         descripcion: "Corte moderno con técnicas personalizadas según tu tipo de cabello.",
         precio: 45000,
-        imagen: "./imagesCatalogoServicios/cortePremium.png",
+        imagen: "https://res.cloudinary.com/diq2bkb49/image/upload/v1776957776/cortePremium_engl79.png",
         status: true
     },
     {
@@ -12,7 +27,7 @@ const productos = [
         nombre: "Tinte y Coloración",
         descripcion: "Coloración de alta calidad con marcas premium. Resultados duraderos.",
         precio: 120000,
-        imagen: "./imagesCatalogoServicios/tinteColoracion.png",
+        imagen: "https://res.cloudinary.com/diq2bkb49/image/upload/v1776957782/tinteColoracion_xlsf5v.png",
         status: true
     },
     {
@@ -20,7 +35,7 @@ const productos = [
         nombre: "Tratamiento de Keratina",
         descripcion: "Alisado profundo que elimina el frizz y deja el cabello sedoso.",
         precio: 180000,
-        imagen: "./imagesCatalogoServicios/keratina.png",
+        imagen: "https://res.cloudinary.com/diq2bkb49/image/upload/v1776957777/keratina_bjqvof.png",
         status: true
     },
     {
@@ -28,7 +43,7 @@ const productos = [
         nombre: "Barba y Afeitado",
         descripcion: "Servicio completo de perfilado de barba y afeitado clásico.",
         precio: 35000,
-        imagen: "./imagesCatalogoServicios/barbaAfeitado.png",
+        imagen: "https://res.cloudinary.com/diq2bkb49/image/upload/v1776957775/barbaAfeitado_fcacso.png",
         status: true
     },
     {
@@ -36,7 +51,7 @@ const productos = [
         nombre: "Peinado para Eventos",
         descripcion: "Peinados profesionales para bodas, graduaciones y eventos especiales.",
         precio: 80000,
-        imagen: "./imagesCatalogoServicios/peinadoEventos.png",
+        imagen: "https://res.cloudinary.com/diq2bkb49/image/upload/v1776957782/peinadoEventos_bk9cyr.png",
         status: true
     },
     {
@@ -44,7 +59,7 @@ const productos = [
         nombre: "Mechas y Reflejos",
         descripcion: "Técnicas de mechas californianas, babylights y reflejos.",
         precio: 150000,
-        imagen: "./imagesCatalogoServicios/mechasReflejos.png",
+        imagen: "https://res.cloudinary.com/diq2bkb49/image/upload/v1776957780/mechasReflejos_p5hod7.png",
         status: true
     },
     {
@@ -52,7 +67,7 @@ const productos = [
         nombre: "Tratamiento Capilar",
         descripcion: "Hidratación y nutrición profunda para cabello maltratado.",
         precio: 65000,
-        imagen: "./imagesCatalogoServicios/tratamientoCapilar.png",
+        imagen: "https://res.cloudinary.com/diq2bkb49/image/upload/v1776957783/tratamientoCapilar_mqkb13.png",
         status: true
     },
     {
@@ -60,7 +75,7 @@ const productos = [
         nombre: "Cepillado Brasileño",
         descripcion: "Alisado progresivo que reduce el volumen y da brillo.",
         precio: 160000,
-        imagen: "./imagesCatalogoServicios/cepilladoBrasileño.png",
+        imagen: "https://res.cloudinary.com/diq2bkb49/image/upload/v1776957775/cepilladoBrasile%C3%B1o_ela99r.png",
         status: true
     },
     {
@@ -68,7 +83,7 @@ const productos = [
         nombre: "Maquillaje Profesional",
         descripcion: "Maquillaje para ocasiones especiales con productos de alta calidad.",
         precio: 90000,
-        imagen: "./imagesCatalogoServicios/maquillajeProfesional.png",
+        imagen: "https://res.cloudinary.com/diq2bkb49/image/upload/v1776957779/maquillajeProfesional_h9vo1k.png",
         status: true
     },
     {
@@ -76,24 +91,38 @@ const productos = [
         nombre: "Limpieza Facial",
         descripcion: "Tratamiento facial profundo para eliminar impurezas y revitalizar.",
         precio: 70000,
-        imagen: "./imagesCatalogoServicios/limpiezaFacial.png",
+        imagen: "https://res.cloudinary.com/diq2bkb49/image/upload/v1776957778/limpiezaFacial_fmvrnn.png",
         status: true
     }
 ];
+
+// Lee del localStorage y renderiza las cards en el DOM.
+// Si el localStorage esta vacio, usa el array hardcodeado como respaldo.
 function renderizarCatalogo() {
     const container = document.getElementById('cards-container');
     
+    // Si el contenedor no existe no tiene nada que renderizar
     if (!container) {
         console.error("No se encontró el contenedor 'cards-container'");
         return;
     }
+
+    // Lee la lista del localStorage, si esta vacia, usa los productos iniciales
+    const lista = JSON.parse(localStorage.getItem("Lista de Servicios")) || productos;
+
     
-    // Filtrar solo los productos activos
-    const productosActivos = productos.filter(producto => producto.status === true);
+    console.log("Lista desde localStorage:", lista)
+    console.log("Total items:", lista.length)
+
+    // Filtra solo los productos activos
+    const productosActivos = lista.filter(producto => {
+    return producto.status === true || producto.status === "true";
+    });
     
-    // Generar el HTML con map()
+    // Genera el HTML de cada card y lo inserta en el contenedor/
     const html = productosActivos.map(producto => {
-        const precioFormateado = producto.precio.toLocaleString('es-CO');
+        // Formatea el precio con separadores de miles en pesos Colombianos
+        const precioFormateado = Number(producto.precio).toLocaleString('es-CO');
         return `
             <div class="card-servicio">
                 <img src="${producto.imagen}" alt="${producto.nombre}" class="card-imagen">
@@ -106,10 +135,11 @@ function renderizarCatalogo() {
             </div>
         `;
     }).join('');
-    
+
+    // Inserta las cards en el DOM
     container.innerHTML = html;
 
-    // Agregar eventos a los botones de reservar
+    // Agrega el evento click a cada boton de reservar
     document.querySelectorAll('.btn-reservar').forEach(boton => {
         boton.addEventListener('click', function() {
             const id = this.getAttribute('data-id');
@@ -117,5 +147,9 @@ function renderizarCatalogo() {
         });
     });
 }
+
+// Ejecuta el renderizado cuando el DOM este completamente cargado.
 document.addEventListener('DOMContentLoaded', renderizarCatalogo);
+
+// Exporta el array
 export default productos;
