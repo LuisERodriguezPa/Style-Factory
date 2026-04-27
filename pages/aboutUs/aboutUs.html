@@ -7,6 +7,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
     <title>Sobre Nosotros</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
@@ -70,213 +74,44 @@
       </div>
     </section>
     <main class="container py-5">
-      <section class="mision_visioin">
-        <div class="mision">
-          <h2 class="titulo_mision">Mision</h2>
-          <p>
-            Brindar servicios de peluquería de alta calidad, enfocados en
-            resaltar la belleza y el bienestar de nuestros clientes, a través de
-            un equipo profesional comprometido con la responsabilidad, la
-            excelencia y una atención cercana y personalizada.
-          </p>
-        </div>
-        <div class="vision">
-          <h2 class="titulo_vision">Vision</h2>
-          <p>
-            Ser una peluquería reconocida por su profesionalismo, innovación y
-            calidad en el servicio, posicionándonos como la primera opción de
-            nuestros clientes y destacándonos por generar experiencias únicas
-            que inspiren confianza y satisfacción.
-          </p>
-        </div>
-      </section>
+      <section class="mision-vision">
+        <h2 class="titulo-seccion mb-5 text-center">MISIÓN & VISIÓN</h2>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="mv-card">
+              <img
+                src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250"
+                alt="Peluquería"
+              />
 
-      <section>
-        <h2 class="text-center titulo-seccion mb-3">Nuestro equipo</h2>
-        <div class="row justify-content-center g-4 mb-3">
-          <div class="col-md-4 col-lg-3">
-            <div class="card team-card text-center ">
-              <div class="img-container">
-                <img
-                  src="https://res.cloudinary.com/diq2bkb49/image/upload/v1776620190/camilo_kcmnnw.png"
-                  class="card-img-top team-img mx-auto"
-                  loading="lazy"
-                  alt="Foto-perfil-camilo"
-                />
-              </div>
-
-              <div class="card-body">
-                <h5 class="card-title">Camilo Orjuela</h5>
-                <p class="card-text rol">
-                  Fullstack & Security<i class="fa-solid fa-angle-down"></i>
+              <div class="mv-overlay">
+                <h3>MISIÓN</h3>
+                <p>
+                  Brindar servicios de peluquería de alta calidad, enfocados en
+                  resaltar la belleza y el bienestar de nuestros clientes, a
+                  través de un equipo profesional comprometido con la
+                  responsabilidad, la excelencia y una atención cercana y
+                  personalizada.
                 </p>
-
-                <small class="descripcion">
-                  Especialista en desarrollo seguro, implementando estrategias
-                  de protección y arquitectura resiliente en aplicaciones
-                  modernas.
-                </small>
-
-                <div class="d-flex justify-content-center gap-2">
-                  <a
-                    class="btn btn-linkedin"
-                    href="https://www.linkedin.com/in/camilo-orjuela-bonilla-desarrollador-full-stack/"
-                    target="_blank"
-                    >LinkedIn</a
-                  >
-                  <a
-                    class="btn btn-github"
-                    href="https://github.com/CamiGit"
-                    target="_blank"
-                    >GitHub</a
-                  >
-                </div>
               </div>
             </div>
           </div>
-          <div class="col-md-4 col-lg-3">
-            <div class="card team-card text-center">
-              <div class="img-container">
-                <img
-                  src="https://res.cloudinary.com/diq2bkb49/image/upload/v1776620185/marcela_ruxl7p.jpg"
-                  class="team-img"
-                  alt="Foto Marcela"
-                />
-              </div>
+          <div class="col-md-6">
+            <div class="mv-card">
+              <img
+                src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1"
+                alt="Cabello profesional"
+              />
 
-              <div class="card-body">
-                <h5 class="card-title">Marcela Patiño</h5>
-
-                <p class="card-text rol">
-                  Fullstack | Java & React
-                  <i class="fa-solid fa-angle-down"></i>
+              <div class="mv-overlay">
+                <h3>VISIÓN</h3>
+                <p>
+                  Ser una peluquería reconocida por su profesionalismo,
+                  innovación y calidad en el servicio, posicionándonos como la
+                  primera opción de nuestros clientes y destacándonos por
+                  generar experiencias únicas que inspiren confianza y
+                  satisfacción.
                 </p>
-
-                <small class="descripcion">
-                  Desarrolla aplicaciones web modernas combinando interfaces
-                  dinámicas con servicios backend eficientes.
-                </small>
-
-                <div class="socials">
-                  <a class="btn btn-linkedin" href="#" target="_blank"
-                    >LinkedIn</a
-                  >
-                  <a class="btn btn-github" href="#" target="_blank">GitHub</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-lg-3">
-            <div class="card team-card text-center">
-              <div class="img-container">
-                <img
-                  src="https://res.cloudinary.com/diq2bkb49/image/upload/v1776620186/luis_lfbqcn.jpg"
-                  class="card-img-top team-img mx-auto"
-                  loading="lazy"
-                  alt="Foto-perfil-luis"
-                />
-              </div>
-
-              <div class="card-body">
-                <h5 class="card-title">Luis Rodriguez</h5>
-                <p class="card-text rol">
-                  Backend & Database<i class="fa-solid fa-angle-down"></i>
-                </p>
-                <small class="descripcion">
-                  Experto en modelado de datos y desarrollo de sistemas backend
-                  eficientes y seguros.
-                </small>
-                <div class="d-flex justify-content-center gap-2">
-                  <a
-                    class="btn btn-linkedin"
-                    href="https://www.linkedin.com/in/luis-eduardo-rodriguez-pava-estudiante-del-bootcamp-full-stack-java-generation/"
-                    target="_blank"
-                    >LinkedIn</a
-                  >
-                  <a
-                    class="btn btn-github"
-                    href="https://github.com/LuisERodriguezPa"
-                    target="_blank"
-                    >GitHub</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row justify-content-center g-4">
-          <div class="col-md-4 col-lg-3">
-            <div class="card team-card text-center">
-              <div class="img-container">
-                <img
-                  src="https://res.cloudinary.com/diq2bkb49/image/upload/v1776620188/enith_xnun0r.png"
-                  class="card-img-top team-img mx-auto"
-                  loading="lazy"
-                  alt="Foto-perfil"
-                />
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Enith Vargas</h5>
-                <p class="card-text rol">
-                  Backend Developer | Cloud<i
-                    class="fa-solid fa-angle-down"
-                  ></i>
-                </p>
-                <small class="descripcion">
-                  Construye APIs robustas y las integra con servicios en la nube
-                  para aplicaciones modernas.
-                </small>
-                <div class="d-flex justify-content-center gap-2">
-                  <a
-                    class="btn btn-linkedin"
-                    href="https://www.linkedin.com/in/gicelavargas/"
-                    target="_blank"
-                    >LinkedIn</a
-                  >
-                  <a
-                    class="btn btn-github"
-                    href="https://github.com/EnithV"
-                    target="_blank"
-                    >GitHub</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-lg-3">
-            <div class="card team-card text-center">
-              <div class="img-container">
-                <img
-                  src="/assets/images/angie.jpeg"
-                  class="card-img-top team-img mx-auto"
-                  alt="Foto-perfil-angie"
-                />
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Angie Beltran</h5>
-                <p class="card-text rol">
-                  Frontend Developer<i class="fa-solid fa-angle-down"></i>
-                </p>
-                <small class="descripcion">
-                  Desarrolladora web enfocada en Front-End, disfruto crear
-                  páginas web atractivas que conectan a los usuarios.
-                </small>
-                <div class="d-flex justify-content-center gap-2">
-                  <a
-                    class="btn btn-linkedin"
-                    href="https://www.linkedin.com/in/angie-valeria-beltran-fronted-developer/"
-                    target="_blank"
-                    class="social-icon icon-linkedin"
-                    >LinkedIn</a
-                  >
-                  <a
-                    class="btn btn-github"
-                    href="https://github.com/angiebel26"
-                    target="_blank"
-                    >GitHub</a
-                  >
-                </div>
               </div>
             </div>
           </div>
@@ -302,6 +137,256 @@
         </div>
         <div class="cta-container">
           <a href="#" class="btn-principal">Reservar cita</a>
+        </div>
+      </section>
+
+      <!-- Nuestro equipo -->
+      <section>
+        <h2 class="text-center titulo-seccion mb-3">Nuestro equipo</h2>
+        <div class="row justify-content-center g-4 mb-3">
+          <div class="col-md-4 col-lg-3">
+            <div class="flip-card" tabindex="0">
+              <div class="flip-card-inner">
+                <div class="flip-card-front team-card text-center">
+                  <div class="img-container">
+                    <img
+                      src="https://res.cloudinary.com/diq2bkb49/image/upload/v1776620190/camilo_kcmnnw.png"
+                      class="team-img"
+                      loading="lazy"
+                      alt="Foto-perfil-camilo"
+                    />
+                  </div>
+
+                  <div class="card-body">
+                    <h5 class="card-title">Camilo Orjuela</h5>
+                    <p class="rol">Fullstack & Security</p>
+                  </div>
+                </div>
+                <div class="flip-card-back team-card text-center">
+                  <div
+                    class="card-body d-flex flex-column justify-content-center h-100"
+                  >
+                    <small class="descripcion">
+                      Desarrolla aplicaciones web modernas combinando interfaces
+                      dinámicas con servicios backend eficientes.
+                    </small>
+
+                    <div class="socials mt-3">
+                      <a
+                        class="btn btn-linkedin"
+                        href="https://www.linkedin.com/in/camilo-orjuela-bonilla-desarrollador-full-stack/"
+                        target="_blank"
+                      >
+                        <i class="bi bi-linkedin"></i>
+                      </a>
+                      <a
+                        class="btn btn-github"
+                        href="https://github.com/CamiGit"
+                        target="_blank"
+                      >
+                        <i class="bi bi-github"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <div class="flip-card" tabindex="0">
+              <div class="flip-card-inner">
+                <div class="flip-card-front team-card text-center">
+                  <div class="img-container">
+                    <img
+                      src="https://res.cloudinary.com/diq2bkb49/image/upload/v1776620185/marcela_ruxl7p.jpg"
+                      class="team-img"
+                      alt="Foto Marcela"
+                    />
+                  </div>
+
+                  <div class="card-body">
+                    <h5 class="card-title">Marcela Patiño</h5>
+                    <p class="rol">Fullstack | Java & React</p>
+                  </div>
+                </div>
+                <div class="flip-card-back team-card text-center">
+                  <div
+                    class="card-body d-flex flex-column justify-content-center h-100"
+                  >
+                    <small class="descripcion">
+                      Especialista en desarrollo seguro, implementando
+                      estrategias de protección y arquitectura resiliente en
+                      aplicaciones modernas.
+                    </small>
+
+                    <div class="socials mt-3">
+                      <a
+                        class="btn btn-linkedin"
+                        href="https://www.linkedin.com/in/marcela-ardila-backenddeveloper/"
+                        target="_blank"
+                      >
+                        <i class="bi bi-linkedin"></i>
+                      </a>
+                      <a
+                        class="btn btn-github"
+                        href="https://github.com/marcelaW40k"
+                        target="_blank"
+                      >
+                        <i class="bi bi-github"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <div class="flip-card" tabindex="0">
+              <div class="flip-card-inner">
+                <div class="flip-card-front team-card text-center">
+                  <div class="img-container">
+                    <img
+                      src="https://res.cloudinary.com/diq2bkb49/image/upload/v1776620186/luis_lfbqcn.jpg"
+                      class="team-img"
+                      loading="lazy"
+                      alt="Foto-perfil-luis"
+                    />
+                  </div>
+
+                  <div class="card-body">
+                    <h5 class="card-title">Luis Rodriguez</h5>
+                    <p class="rol">Backend & Database</p>
+                  </div>
+                </div>
+                <div class="flip-card-back team-card text-center">
+                  <div
+                    class="card-body d-flex flex-column justify-content-center h-100"
+                  >
+                    <small class="descripcion">
+                      Experto en modelado de datos y desarrollo de sistemas
+                      backend eficientes y seguros.
+                    </small>
+
+                    <div class="socials mt-3">
+                      <a
+                        class="btn btn-linkedin"
+                        href="https://www.linkedin.com/in/luis-eduardo-rodriguez-pava-estudiante-del-bootcamp-full-stack-java-generation/"
+                        target="_blank"
+                      >
+                        <i class="bi bi-linkedin"></i>
+                      </a>
+                      <a
+                        class="btn btn-github"
+                        href="https://github.com/LuisERodriguezPa"
+                        target="_blank"
+                      >
+                        <i class="bi bi-github"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center g-4">
+          <div class="col-md-4 col-lg-3">
+            <div class="flip-card" tabindex="0">
+              <div class="flip-card-inner">
+                <div class="flip-card-front team-card text-center">
+                  <div class="img-container">
+                    <img
+                      src="https://res.cloudinary.com/diq2bkb49/image/upload/v1776620188/enith_xnun0r.png"
+                      class="team-img"
+                      loading="lazy"
+                      alt="Foto-perfil-enith"
+                    />
+                  </div>
+
+                  <div class="card-body">
+                    <h5 class="card-title">Enith Vargas</h5>
+                    <p class="rol">Backend Developer | Cloud</p>
+                  </div>
+                </div>
+                <div class="flip-card-back team-card text-center">
+                  <div
+                    class="card-body d-flex flex-column justify-content-center h-100"
+                  >
+                    <small class="descripcion">
+                      Construye APIs robustas y las integra con servicios en la
+                      nube para aplicaciones modernas.
+                    </small>
+
+                    <div class="socials mt-3">
+                      <a
+                        class="btn btn-linkedin"
+                        href="https://www.linkedin.com/in/gicelavargas/"
+                        target="_blank"
+                      >
+                        <i class="bi bi-linkedin"></i>
+                      </a>
+                      <a
+                        class="btn btn-github"
+                        href="https://github.com/EnithV"
+                        target="_blank"
+                      >
+                        <i class="bi bi-github"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <div class="flip-card" tabindex="0">
+              <div class="flip-card-inner">
+                <div class="flip-card-front team-card text-center">
+                  <div class="img-container">
+                    <img
+                      src="https://res.cloudinary.com/diq2bkb49/image/upload/v1776957597/angie_hku0vj.jpg"
+                      class="team-img"
+                      loading="lazy"
+                      alt="Foto-perfil-angie"
+                    />
+                  </div>
+
+                  <div class="card-body">
+                    <h5 class="card-title">Angie Beltran</h5>
+                    <p class="rol">Frontend Developer</p>
+                  </div>
+                </div>
+                <div class="flip-card-back team-card text-center">
+                  <div
+                    class="card-body d-flex flex-column justify-content-center h-100"
+                  >
+                    <small class="descripcion">
+                      Desarrolladora web enfocada en Front-End, disfruto crear
+                      páginas web atractivas que conectan a los usuarios.
+                    </small>
+
+                    <div class="socials mt-3">
+                      <a
+                        class="btn btn-linkedin"
+                        href="https://www.linkedin.com/in/angie-valeria-beltran-fronted-developer/"
+                        target="_blank"
+                      >
+                        <i class="bi bi-linkedin"></i>
+                      </a>
+                      <a
+                        class="btn btn-github"
+                        href="https://github.com/angiebel26"
+                        target="_blank"
+                      >
+                        <i class="bi bi-github"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
