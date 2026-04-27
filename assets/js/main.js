@@ -1,8 +1,8 @@
 
-fetch('components/navbar/navbar.html')
+fetch('/components/navbar/navbar.html')
     .then(res => res.text())
     .then(html => {
-        document.getElementById('navbar-placeholder').innerHTML = html;
+        document.getElementById('header').innerHTML = html;
     })
     .catch(err => console.error('Error cargando el navbar:', err));
 
@@ -11,7 +11,7 @@ fetch('components/bannerInicio/bannerInicio.html')
     .then(html => {
         document.getElementById('bannerInicio-placeholder').innerHTML = html;
     })
-    .catch(err => console.error('Error cargando el información index:', err));
+    .catch(err => console.error('Error cargando el banner en index:', err));
 
 fetch('components/infoIndex/infoIndex.html')
     .then(res => res.text())
@@ -20,7 +20,7 @@ fetch('components/infoIndex/infoIndex.html')
     })
     .catch(err => console.error('Error cargando el información index:', err));
 
-fetch('components/serviciosDestacados/serviciosDestacados.html')
+fetch('/components/Servicios Destacados/ServiciosDestacados.html')
     .then(res => res.text())
     .then(html => {
         document.getElementById('serviceDes-placeholder').innerHTML = html;

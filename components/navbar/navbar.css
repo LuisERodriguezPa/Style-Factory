@@ -6,7 +6,7 @@ body{
     font-family: 'Montserrat', sans-serif;;
 }
 h1, h2, h3,h4,h5,h6 {
-    font-family: , serif;'Playfair Display'
+    font-family: 'Playfair Display' serif;
 }
 #header{
     width: 100%;
@@ -28,7 +28,6 @@ h1, h2, h3,h4,h5,h6 {
     height: 100%;
     display: flex;
     align-items: center;
-    padding: 10px 0;
 }
 .div_logo h1{
     color: #fff;
@@ -125,6 +124,9 @@ h1, h2, h3,h4,h5,h6 {
     color: var(--color-secundario)!important;
 }
 @media (max-width: 576px) {
+    .navbar-toggler{
+        margin-right: 15px;
+    }
     .navbar {
         height: auto;
     }
@@ -132,6 +134,10 @@ h1, h2, h3,h4,h5,h6 {
         height: auto;
         align-items: flex-start;
         padding: 1rem;
+    }
+    .div_logo a img{
+        height: 60px;
+        padding: 10px;
     }
     .dropdown-item:hover, .dropdown-item:focus {
         color: var(--color-secundario);
@@ -180,11 +186,25 @@ h1, h2, h3,h4,h5,h6 {
     
 }
 @media (max-width: 991px) {
+    .navbar-toggler{
+        margin-right: 15px;
+    }
+    .navbar {
+        height: auto;
+    }
     .container-fluid{
         padding: 0;
     }
+    .navbar-collapse{
+        height: auto;
+    }
     .navbar-nav{
+        height: auto;
         align-items: center;
+    }
+    .div_logo a img{
+        height: 60px;
+        padding: 10px;
     }
     .login{
         margin:0;
@@ -209,4 +229,12 @@ h1, h2, h3,h4,h5,h6 {
         justify-content: center;
     }
 
+}
+
+@media (min-width: 992px) {
+  /* estilos para desktop */
+
+    .div_logo{
+        padding: 20px;
+    }
 }
