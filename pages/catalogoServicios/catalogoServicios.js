@@ -142,8 +142,26 @@ function renderizarCatalogo() {
     // Agrega el evento click a cada boton de reservar
     document.querySelectorAll('.btn-reservar').forEach(boton => {
         boton.addEventListener('click', function() {
-            const id = this.getAttribute('data-id');
-            alert(`Reservaste el servicio ID: ${id}. Próximamente disponible.`);
+        ton.addEventListener('click', function () {
+    const id = parseInt(this.getAttribute('data-id'));
+
+    // Buscar el producto seleccionado
+    const productoSeleccionado = productos.find(p => p.id === id);
+
+    // Obtener reservas actuales o crear array vacío
+    let reservas = JSON.parse(localStorage.getItem('reservas')) || [];
+
+    // Evitar duplicados (opcional)
+    const existe = reservas.some(r => r.id === id);
+
+    if (!existe) {
+      reservas.push(productoSeleccionado);
+      localStorage.setItem('reservas', JSON.stringify(reservas));
+      alert("Reserva añadida correctamente ✅");
+    } else {
+      alert("Este servicio ya está reservado ⚠️");
+    }
+
         });
     });
 }
