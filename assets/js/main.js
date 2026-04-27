@@ -20,7 +20,7 @@ fetch('components/infoIndex/infoIndex.html')
     })
     .catch(err => console.error('Error cargando el información index:', err));
 
-fetch('components/serviciosDestacados/serviciosDestacados.html')
+fetch('/components/Servicios Destacados/ServiciosDestacados.html')
     .then(res => res.text())
     .then(html => {
         document.getElementById('serviceDes-placeholder').innerHTML = html;

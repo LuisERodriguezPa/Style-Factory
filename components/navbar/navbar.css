@@ -28,7 +28,6 @@ h1, h2, h3,h4,h5,h6 {
     height: 100%;
     display: flex;
     align-items: center;
-    padding: 10px;
 }
 .div_logo h1{
     color: #fff;
@@ -138,6 +137,7 @@ h1, h2, h3,h4,h5,h6 {
     }
     .div_logo a img{
         height: 60px;
+        padding: 10px;
     }
     .dropdown-item:hover, .dropdown-item:focus {
         color: var(--color-secundario);
@@ -204,6 +204,7 @@ h1, h2, h3,h4,h5,h6 {
     }
     .div_logo a img{
         height: 60px;
+        padding: 10px;
     }
     .login{
         margin:0;
@@ -228,4 +229,12 @@ h1, h2, h3,h4,h5,h6 {
         justify-content: center;
     }
 
+}
+
+@media (min-width: 992px) {
+  /* estilos para desktop */
+
+    .div_logo{
+        padding: 20px;
+    }
 }

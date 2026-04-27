@@ -163,18 +163,6 @@
     transform: translateY(-2px);
 }
 
-/* Boton agregar servicio*/
-.btn-agregar-servicio{
-    border-radius: 50%;
-    background-color: #4f0987;
-    border: #4f0987;
-}
-.btn-agregar-servicio:hover{
-    background-color: #8a32d1;
-}
-.text-truncate{
-  overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
-}
 
 /* Responsive */
 @media (max-width: 768px) {

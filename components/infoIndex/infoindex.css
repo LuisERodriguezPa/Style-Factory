@@ -22,3 +22,27 @@
     font-weight: bold;
 }
 
+.container-custom {
+  width: 100%;
+  max-width: 100%; 
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.linea-separadora {
+  width: 100px;
+  height: 2px;
+  margin: 15px auto 20px;
+  border-radius: 10px;
+  background: var(--color-secondary);
+}
+
+.subtitulo{
+    font-family: var(--font-family-general);
+    font-size: 1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    text-align: center;
+}
