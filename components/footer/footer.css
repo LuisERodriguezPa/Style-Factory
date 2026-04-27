@@ -5,10 +5,10 @@
 
 .footer {
     background: var(--color-primario);
-    color: #B5ADAD;
+    color: #ffffff;
     margin-top: 50px;
     font-size: 14px;
-    border-top: 1px solid #222;
+    border-top: 1px solid #B5ADAD;
 }
 
 .footer-content {
@@ -20,11 +20,12 @@
 }
 
 .footer-links a {
-    color: #B5ADAD;
+    color: #ffffff;
     text-decoration: none;
     display: block;
     margin: 10px 0;
     transition: 0.3s;
+    font-size: 20px;
 }
 
 .footer-links a:hover {
@@ -42,7 +43,7 @@
 }
 
 .social-links a {
-    color: #B5ADAD;
+    color: #fffdfd;
     font-size: 20px;
     transition: 0.3s;
 }
@@ -55,5 +56,5 @@
 .footer-copyright {
     text-align: center;
     padding: 20px;
-    border-top: 1px solid #333;
+    border-top: 1px solid #B5ADAD
 }

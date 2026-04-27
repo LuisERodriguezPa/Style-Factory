@@ -12,9 +12,3 @@ fetch('../../components/footer/footer.html')
         document.getElementById('footer-placeholder').innerHTML = html;
     })
     .catch(err => console.error('Error cargando el footer:', err));
-
-    document.querySelectorAll(".team-card").forEach(card => {
-  card.querySelector(".rol").addEventListener("click", () => {
-    card.classList.toggle("active");
-  });
-});
