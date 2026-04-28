@@ -1,3 +1,5 @@
+// import { btnReservar } from "../../catalogoServicios/catalogoServicios.js";
+
 const container = document.getElementById('reservas_container');
 const reservas = JSON.parse(localStorage.getItem('reservas')) || [];
 

@@ -11,7 +11,7 @@ if (document.getElementById('cards-container')) {
 
     document.addEventListener('DOMContentLoaded', renderizarCatalogo);
 }
-
+let btnReservar;
 // Array con los 10 productos iniciales
 const productos = [
     {
@@ -166,7 +166,9 @@ function renderizarCatalogo() {
 }
 
 // Ejecuta el renderizado cuando el DOM este completamente cargado.
+
 document.addEventListener('DOMContentLoaded', renderizarCatalogo);
 
+
 // Exporta el array
-export default productos;
+export  {productos, btnReservar};
