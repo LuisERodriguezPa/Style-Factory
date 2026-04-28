@@ -1,27 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/components/footer/footer.css">
-    <link rel="stylesheet" href="/components/navbar/navbar.css">
-    <link rel="stylesheet" href="reservations.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    
+    <link rel="stylesheet" href="/components/footer/footer.css" />
+    <link rel="stylesheet" href="/components/navbar/navbar.css" />
+    <link rel="stylesheet" href="reservations.css" />
+    <link rel="stylesheet" href="../../assets/css/main.css">
     <title>Reservas</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header id="header" class="sticky-top"></header>
+    <!--Sección estilistas-->
+    <section class="container py-5">
+      <h2 class="card-title text-center mb-2">Nuestros Estilistas</h2>
+        <p class="text-center subtitle">Elije a tu estilista y reserva tu cita</p>
+      <div id="carouselEstilistas" class="carousel slide">
+        <div class="carousel-inner" id="carouselInner"></div>
+        <div class="content-calendario">
+            <p style="display: none">fehca y hora</p>
+        </div>
 
-    <h1>Estamos trabajando para brindarle un mejor servicio en la pagina de reservas</h1>
+        <button
+          class="carousel-control-prev"
+          data-bs-target="#carouselEstilistas"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button
+          class="carousel-control-next"
+          data-bs-target="#carouselEstilistas"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </section>
 
     <div id="footer-placeholder"></div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
     <script src="reservations.js"></script>
-</body>
-
+  </body>
 </html>

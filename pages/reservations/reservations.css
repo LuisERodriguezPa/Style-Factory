@@ -1,0 +1,52 @@
+:root {
+  --color-primary: #522676;
+  --color-secondary: #ae8d3e;
+  --font-family-title: "Playfair Display", serif;
+  --font-family-general: "Montserrat", sans-serif;
+}
+
+.card-title {
+  color: var(--color-primary);
+  font-family: var(--font-family-title);
+  font-size: 3rem;
+}
+
+.card-estilista {
+  cursor: pointer;
+  transition: transform 0.3s;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 2px solid #AE8D3E;
+}
+
+.card-estilista:hover {
+  transform: scale(1.05);
+}
+
+.card-estilista img {
+  height: 220px;
+  object-fit: cover;
+}
+
+.detalle-container {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  margin-top: 40px;
+}
+.card-body h5 {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.text-purple {
+  color: var(--color-primary);
+  font-family: var(--font-family-title);
+  font-size: 18px;
+}
+
+.subtitle{
+    font-family: var(--font-family-general);
+    font-size: 1rem;
+    color: #666;
+}
