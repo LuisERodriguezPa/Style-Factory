@@ -1,0 +1,18 @@
+.contenido_reserva{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.contenedor_imagen{
+    flex-basis: 300px;;
+}
+.contenedor_imagen img{
+    display: block;
+    width: 100%;
+}
+.contenedor_precio{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
