@@ -34,6 +34,7 @@
   padding: 30px;
   margin-top: 40px;
 }
+
 .card-body h5 {
   font-weight: 700;
   margin-bottom: 4px;
@@ -45,8 +46,192 @@
   font-size: 18px;
 }
 
-.subtitle{
-    font-family: var(--font-family-general);
-    font-size: 1rem;
-    color: #666;
+.subtitle {
+  font-family: var(--font-family-general);
+  font-size: 1rem;
+  color: #666;
+}
+
+/* ════════════════════════════════════════════
+   CALENDARIO
+════════════════════════════════════════════ */
+
+/* Contenedor del calendario */
+.calendario-wrapper {
+  background: #faf8fc;
+  border: 1px solid rgba(82, 38, 118, 0.15);
+  border-radius: 16px;
+}
+
+/* Etiqueta del mes (ej: "Abril 2026") */
+.cal-month-label {
+  font-family: var(--font-family-title);
+  font-size: 17px;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* Botones de navegación del mes < > */
+.btn-cal-nav {
+  background: none;
+  border: 1px solid rgba(82, 38, 118, 0.2);
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  color: var(--color-primary);
+  cursor: pointer;
+  line-height: 1;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.btn-cal-nav:hover {
+  background: rgba(82, 38, 118, 0.08);
+  border-color: var(--color-primary);
+}
+
+/* Grid de 7 columnas para el calendario */
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  font-family: var(--font-family-general);
+}
+
+/* Nombre de cada día (D L M M J V S) */
+.cal-nombre-dia {
+  font-size: 10px;
+  text-align: center;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 0 8px;
+}
+
+/* Celda de día base: por defecto deshabilitada */
+.cal-dia {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-family: var(--font-family-general);
+  border-radius: 8px;
+  color: #ccc;
+  /* días sin disponibilidad: gris claro */
+  cursor: default;
+  border: 1px solid transparent;
+  position: relative;
+  transition: all 0.15s;
+}
+
+/* Días con disponibilidad: color activo y clicable */
+.cal-dia.disponible {
+  color: #333;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Punto indicador debajo del número del día disponible */
+.cal-dia.disponible::after {
+  content: '';
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+  /* dorado del proyecto */
+}
+
+.cal-dia.disponible:hover {
+  background: rgba(174, 141, 62, 0.12);
+  border-color: var(--color-secondary);
+}
+
+/* Día seleccionado: fondo morado, texto blanco */
+.cal-dia.seleccionado {
+  background: var(--color-primary) !important;
+  color: white !important;
+  border-color: var(--color-primary) !important;
+}
+
+/* Oculta el punto dorado cuando el día está seleccionado */
+.cal-dia.seleccionado::after {
+  display: none;
+}
+
+/* ════════════════════════════════════════════
+   HORAS DISPONIBLES
+════════════════════════════════════════════ */
+
+/* Contenedor del panel de horas */
+.horas-wrapper {
+  background: #faf8fc;
+  border: 1px solid rgba(82, 38, 118, 0.15);
+  border-radius: 16px;
+  min-height: 200px;
+}
+
+/* Fecha seleccionada en texto legible */
+.horas-fecha-label {
+  font-family: var(--font-family-title);
+  font-size: 17px;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+/* Grid de 4 columnas para los botones de hora */
+.horas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* Botón de hora individual */
+.btn-hora {
+  background: white;
+  border: 1px solid rgba(174, 141, 62, 0.4);
+  border-radius: 10px;
+  padding: 10px 8px;
+  font-family: var(--font-family-general);
+  font-size: 13px;
+  font-weight: 500;
+  color: #444;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: center;
+}
+
+.btn-hora:hover {
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
+  background: rgba(174, 141, 62, 0.08);
+}
+
+/* Hora seleccionada: fondo dorado */
+.btn-hora.seleccionado {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: white;
+  font-weight: 600;
+}
+
+/* ════════════════════════════════════════════
+   RESUMEN / CONFIRMAR RESERVA
+════════════════════════════════════════════ */
+
+
+/* ── Responsive: en móvil la grilla de horas pasa a 3 columnas ── */
+@media (max-width: 576px) {
+  .horas-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card-title {
+    font-size: 2rem;
+  }
 }

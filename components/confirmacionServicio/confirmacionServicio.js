@@ -78,10 +78,10 @@ function actualizarFechaHora(fecha, hora) {
 
 function confirmarReserva() {
     alert(`RESERVA CONFIRMADA\n\n` +
-          `${reservaActual.servicio.nombre}\n` +
-          `${reservaActual.profesional.nombre}\n` +
-          `${reservaActual.fecha} / ${reservaActual.hora}\n` +
-          `${formatearPrecio(calcularTotal())}`);
+        `${reservaActual.servicio.nombre}\n` +
+        `${reservaActual.profesional.nombre}\n` +
+        `${reservaActual.fecha} / ${reservaActual.hora}\n` +
+        `${formatearPrecio(calcularTotal())}`);
     
     return reservaActual;
 }
