@@ -148,11 +148,10 @@ function renderizarCatalogo() {
             // Buscar el producto seleccionado
             const productoSeleccionado = productos.find(p => p.id === id);
 
-            // Obtener reservas actuales o crear array vacío
-            let reservas = JSON.parse(localStorage.getItem('reservas')) || [];
+            localStorage.setItem('reservas', JSON.stringify([productoSeleccionado]));
 
-            // Evitar duplicados (opcional)
-            const existe = reservas.some(r => r.id === id);
+            // Redirige inmediatamente a reservaciones
+            window.location.href = '/pages/reservations/reservations.html';
 
             if (!existe) {
             reservas.push(productoSeleccionado);
