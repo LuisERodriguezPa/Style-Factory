@@ -15,9 +15,17 @@
 </head>
 
 <body>
+
   <header id="header" class="sticky-top"></header>
 
-  <!-- ── SECCIÓN ESTILISTAS ── -->
+  <!-- ── PASO 1: SERVICIO SELECCIONADO ── -->
+  <section class="container py-4" id="seccionServicio">
+    <h2 class="card-title text-center mb-2">Tu servicio</h2>
+    <p class="text-center subtitle">Revisa el servicio que seleccionaste</p>
+    <div id="reservas_container"></div>
+  </section>
+
+  <!-- ── PASO 2: SECCIÓN ESTILISTAS ── -->
   <section class="container py-5">
     <h2 class="card-title text-center mb-2">Nuestros Estilistas</h2>
     <p class="text-center subtitle">Elige a tu estilista y reserva tu cita</p>
@@ -34,52 +42,41 @@
     </div>
   </section>
 
-  <!-- ── SECCIÓN FECHA Y HORA (oculta hasta que se elija un estilista) ── -->
+  <!-- ── PASO 3: SECCIÓN FECHA Y HORA (oculta hasta que se elija un estilista) ── -->
   <section class="container pb-5" id="seccionCalendario" style="display:none;">
 
-    <!-- Encabezado con el estilista seleccionado -->
     <div class="detalle-container">
       <h5 class="card-title mb-4" style="font-size:1.6rem;">Selecciona fecha y hora</h5>
 
-      <!-- Grid: calendario | horas disponibles -->
       <div class="row g-4">
 
         <!-- ── COLUMNA CALENDARIO ── -->
-        <div class="col-md-5">
+        <div class="col-md-4">
           <div class="calendario-wrapper p-3">
-
-            <!-- Encabezado del mes con flechas de navegación -->
             <div class="d-flex justify-content-between align-items-center mb-3">
               <button class="btn-cal-nav" id="prevMonth">&#8249;</button>
               <span class="cal-month-label" id="calMonthLabel"></span>
               <button class="btn-cal-nav" id="nextMonth">&#8250;</button>
             </div>
-
-            <!-- Grid de días: generado dinámicamente por JS -->
             <div class="cal-grid" id="calGrid"></div>
-
           </div>
         </div>
 
         <!-- ── COLUMNA HORAS ── -->
-        <div class="col-md-7">
+        <div class="col-md-8">
           <div class="horas-wrapper p-3">
-
-            <!-- Fecha seleccionada en texto legible -->
             <p class="horas-fecha-label" id="horasFechaLabel">Selecciona un día disponible</p>
-
-            <!-- Botones de hora: generados dinámicamente por JS -->
             <div id="horasGrid" class="horas-grid">
               <p class="text-muted" style="font-size:13px;">
                 Los horarios aparecerán al elegir una fecha.
               </p>
             </div>
-
           </div>
         </div>
 
       </div>
 
+      <!-- ── PASO 4: CONFIRMACIÓN ── -->
       <div id="confirmacionServicioWrapper" class="confirmacion-wrapper" style="display:none; margin-top: 30px;">
         <div class="confirmacion-container">
           <div class="confirmacion-header">
@@ -95,12 +92,10 @@
                 <div class="conf-item-label">SERVICIO:</div>
                 <div class="conf-item-value" id="confServicio">CORTE BASICO</div>
               </div>
-
               <div class="conf-item">
                 <div class="conf-item-label">PROFESIONAL:</div>
                 <div class="conf-item-value" id="confProfesional">ANDREA RIVERA</div>
               </div>
-
               <div class="conf-item">
                 <div class="conf-item-label">CITA:</div>
                 <div class="conf-item-value" id="confFechaHora">ABR 25 // 2:00 PM</div>
