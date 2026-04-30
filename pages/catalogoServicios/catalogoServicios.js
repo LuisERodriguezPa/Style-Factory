@@ -11,7 +11,7 @@ if (document.getElementById('cards-container')) {
 
     document.addEventListener('DOMContentLoaded', renderizarCatalogo);
 }
-
+let btnReservar;
 // Array con los 10 productos iniciales
 const productos = [
     {
@@ -148,11 +148,10 @@ function renderizarCatalogo() {
             // Buscar el producto seleccionado
             const productoSeleccionado = productos.find(p => p.id === id);
 
-            // Obtener reservas actuales o crear array vacío
-            let reservas = JSON.parse(localStorage.getItem('reservas')) || [];
+            localStorage.setItem('reservas', JSON.stringify([productoSeleccionado]));
 
-            // Evitar duplicados (opcional)
-            const existe = reservas.some(r => r.id === id);
+            // Redirige inmediatamente a reservaciones
+            window.location.href = '/pages/reservations/reservations.html';
 
             if (!existe) {
             reservas.push(productoSeleccionado);
@@ -166,7 +165,9 @@ function renderizarCatalogo() {
 }
 
 // Ejecuta el renderizado cuando el DOM este completamente cargado.
+
 document.addEventListener('DOMContentLoaded', renderizarCatalogo);
 
+
 // Exporta el array
-export default productos;
+export  {productos, btnReservar};
