@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="registroUsuario.css">
+    <title>Registro de usuario</title>
+</head>
+<body>
+
+    <section class="form-container">
+
+        <h2 class="titulo-form">Crear cuenta</h2>
+
+        <form id="formRegistro" class="formulario">
+
+            <div class="input-group">
+                <input type="text" id="nombreCompleto" name="nombreCompleto" required placeholder="">
+                <label>Nombre completo</label>
+                <span class="error" id="errorNombre"></span>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="email" name="email" required placeholder="">
+                <label>Correo electrónico</label>
+                <span class="error" id="errorEmail"></span>
+            </div>
+
+            <div class="input-group">
+                <input type="tel" id="telefono" name="telefono" required placeholder="">
+                <label>Teléfono</label>
+                <span class="error" id="errorTelefono"></span>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="password" name="password" required placeholder="">
+                <label>Contraseña</label>
+                <span class="error" id="errorPassword"></span>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="">
+                <label>Confirmar contraseña</label>
+                <span class="error" id="errorConfirmPassword"></span>
+            </div>
+
+            <button type="submit" class="btn-registro">Registrarse</button>
+
+        </form>
+
+        <div id="mensajeExito" class="mensaje-exito" style="display: none;">
+            ¡Registro exitoso!
+        </div>
+
+    </section>
+
+    <script src="registroUsuario.js"></script>
+
+</body>
+</html>
