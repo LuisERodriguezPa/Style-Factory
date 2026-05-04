@@ -1,5 +1,5 @@
 // Importa el array de productos iniciales hardcodeados
-import productos from '../../../pages/catalogoServicios/catalogoServicios.js';
+import { productos } from '/pages/catalogoServicios/catalogoServicios.js';
 
 // Lee la lista del localStorage, si no existe inicializa con un array vacio
 let listaDeServicios = JSON.parse(localStorage.getItem("Lista de Servicios")) || [];
