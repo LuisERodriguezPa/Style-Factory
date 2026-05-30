@@ -80,10 +80,8 @@ fetch('/components/navbar/navbar.html')
             // 2. Obtenemos el nombre del archivo del href del enlace
             let rutaEnlace = enlace.getAttribute('href').split("/").pop();
             console.log("Comparando:", rutaEnlace, "con", rutaActual);
-            console.log("Comparando:", rutaEnlace, "con", rutaActual);
             if(rutaEnlace == rutaActual){
                 enlace.classList.add('active');
-                console.log("Agregando clase activo")
              }else {
                  enlace.classList.remove('active');
              }
