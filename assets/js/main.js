@@ -83,7 +83,6 @@ fetch('/components/navbar/navbar.html')
             console.log("Comparando:", rutaEnlace, "con", rutaActual);
             if(rutaEnlace == rutaActual){
                 enlace.classList.add('active');
-                console.log("Agregando clase activo")
              }else {
                  enlace.classList.remove('active');
              }
